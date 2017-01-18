@@ -1,0 +1,51 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 1/18/17 12:55 AM
+Description: Exception in server tick loop
+
+java.lang.NullPointerException: Exception in server tick loop
+	at shane2482.deadlyworld.container.ContainerWorkstation.onContainerClosed(ContainerWorkstation.java:133)
+	at net.minecraft.entity.player.EntityPlayer.setDead(EntityPlayer.java:1585)
+	at net.minecraft.world.World.removeEntity(World.java:1262)
+	at net.minecraft.server.management.PlayerList.playerLoggedOut(PlayerList.java:429)
+	at net.minecraft.network.NetHandlerPlayServer.onDisconnect(NetHandlerPlayServer.java:837)
+	at net.minecraft.network.NetworkManager.checkDisconnected(NetworkManager.java:508)
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:228)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:806)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_112, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 698368056 bytes (666 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2209 10 mods loaded, 10 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.10.2-12.18.3.2209.jar) 
+	UCHIJAAAA	Forge{12.18.3.2209} [Minecraft Forge] (forgeSrc-1.10.2-12.18.3.2209.jar) 
+	UCHIJAAAA	deadlyworld{1.0} [Deadly World] (bin) 
+	UCHIJAAAA	JEI{3.13.6.389} [Just Enough Items] (jei_1.10.2-3.13.6.389.jar) 
+	UCHIJAAAA	mantle{1.10.2-1.1.4.203} [Mantle] (Mantle-1.10.2-1.1.4.jar) 
+	UCHIJAAAA	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	UCHIJAAAA	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCHIJAAAA	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCHIJAAAA	wawla{2.3.1.213} [What Are We Looking At] (Wawla-1.10.2-2.3.1.213.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player122'/58, l='New World', x=636.90, y=65.00, z=-189.78]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

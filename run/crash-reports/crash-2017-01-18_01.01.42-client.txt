@@ -1,0 +1,129 @@
+---- Minecraft Crash Report ----
+// I'm sorry, Dave.
+
+Time: 1/18/17 1:01 AM
+Description: Updating screen events
+
+java.lang.NullPointerException: Updating screen events
+	at shane2482.deadlyworld.container.ContainerWorkstation.onContainerClosed(ContainerWorkstation.java:143)
+	at net.minecraft.client.gui.inventory.GuiContainer.onGuiClosed(GuiContainer.java:743)
+	at shane2482.deadlyworld.gui.GuiWorkstation.onGuiClosed(GuiWorkstation.java:30)
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:989)
+	at net.minecraft.client.entity.EntityPlayerSP.closeScreenAndDropStack(EntityPlayerSP.java:382)
+	at net.minecraft.client.entity.EntityPlayerSP.closeScreen(EntityPlayerSP.java:375)
+	at net.minecraft.client.gui.inventory.GuiContainer.keyTyped(GuiContainer.java:696)
+	at net.minecraft.client.gui.GuiScreen.handleKeyboardInput(GuiScreen.java:645)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:593)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1797)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1118)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:406)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at shane2482.deadlyworld.container.ContainerWorkstation.onContainerClosed(ContainerWorkstation.java:143)
+	at net.minecraft.client.gui.inventory.GuiContainer.onGuiClosed(GuiContainer.java:743)
+	at shane2482.deadlyworld.gui.GuiWorkstation.onGuiClosed(GuiWorkstation.java:30)
+	at net.minecraft.client.Minecraft.displayGuiScreen(Minecraft.java:989)
+	at net.minecraft.client.entity.EntityPlayerSP.closeScreenAndDropStack(EntityPlayerSP.java:382)
+	at net.minecraft.client.entity.EntityPlayerSP.closeScreen(EntityPlayerSP.java:375)
+	at net.minecraft.client.gui.inventory.GuiContainer.keyTyped(GuiContainer.java:696)
+	at net.minecraft.client.gui.GuiScreen.handleKeyboardInput(GuiScreen.java:645)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:593)
+
+-- Affected screen --
+Details:
+	Screen name: shane2482.deadlyworld.gui.GuiWorkstation
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player857'/60, l='MpServer', x=636.90, y=65.00, z=-189.78]]
+	Chunk stats: MultiplayerChunkCache: 726, 726
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (679,4,-174), Chunk: (at 7,0,2 in 42,-11; contains blocks 672,0,-176 to 687,255,-161), Region: (1,-1; contains chunks 32,-32 to 63,-1, blocks 512,0,-512 to 1023,255,-1)
+	Level time: 65720 game time, 65720 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 43 total; [EntityVillager['Villager'/1, l='MpServer', x=608.50, y=65.00, z=-181.34], EntityVillager['Villager'/2, l='MpServer', x=622.30, y=65.00, z=-164.29], EntityVillager['Villager'/3, l='MpServer', x=622.50, y=66.00, z=-166.52], EntityArmorStand['Armor Stand'/4, l='MpServer', x=634.50, y=65.00, z=-192.50], EntityItemFrame['Item Frame'/5, l='MpServer', x=637.97, y=68.50, z=-193.50], EntityItemFrame['Item Frame'/6, l='MpServer', x=637.97, y=68.50, z=-192.50], EntityItemFrame['Item Frame'/7, l='MpServer', x=637.97, y=68.50, z=-195.50], EntityItemFrame['Item Frame'/8, l='MpServer', x=637.97, y=68.50, z=-194.50], EntityItemFrame['Item Frame'/9, l='MpServer', x=635.03, y=68.50, z=-193.50], EntityItemFrame['Item Frame'/10, l='MpServer', x=635.03, y=68.50, z=-192.50], EntityItemFrame['Item Frame'/11, l='MpServer', x=635.03, y=68.50, z=-194.50], EntityItemFrame['Item Frame'/12, l='MpServer', x=637.97, y=68.50, z=-191.50], EntityItemFrame['Item Frame'/13, l='MpServer', x=637.97, y=68.50, z=-190.50], EntityItemFrame['Item Frame'/14, l='MpServer', x=637.97, y=68.50, z=-189.50], EntityItemFrame['Item Frame'/15, l='MpServer', x=637.97, y=68.50, z=-188.50], EntityItemFrame['Item Frame'/16, l='MpServer', x=634.03, y=67.50, z=-191.50], EntityItemFrame['Item Frame'/17, l='MpServer', x=635.03, y=68.50, z=-191.50], EntityVillager['Villager'/18, l='MpServer', x=623.73, y=65.00, z=-177.46], EntityVillager['Villager'/19, l='MpServer', x=624.93, y=65.00, z=-161.70], EntityVillager['Villager'/20, l='MpServer', x=625.25, y=65.00, z=-164.59], EntityVillager['Villager'/21, l='MpServer', x=625.70, y=65.00, z=-161.30], EntitySquid['Squid'/22, l='MpServer', x=629.60, y=56.76, z=-154.40], EntitySquid['Squid'/23, l='MpServer', x=629.60, y=54.00, z=-154.40], EntityPlayerSP['Player857'/60, l='MpServer', x=636.90, y=65.00, z=-189.78], EntitySquid['Squid'/24, l='MpServer', x=628.94, y=59.52, z=-154.40], EntitySquid['Squid'/25, l='MpServer', x=629.60, y=60.49, z=-155.04], EntityVillager['Villager'/26, l='MpServer', x=635.77, y=65.00, z=-151.62], EntityVillager['Villager'/27, l='MpServer', x=627.87, y=64.00, z=-148.94], EntityVillager['Villager'/28, l='MpServer', x=624.17, y=65.00, z=-146.51], EntityVillager['Villager'/29, l='MpServer', x=635.30, y=65.00, z=-152.32], EntityVillager['Villager'/30, l='MpServer', x=635.42, y=65.00, z=-150.93], EntityVillager['Villager'/31, l='MpServer', x=630.92, y=65.00, z=-139.30], EntityVillager['Villager'/32, l='MpServer', x=630.92, y=65.00, z=-139.30], EntityVillager['Villager'/33, l='MpServer', x=630.92, y=65.00, z=-139.30], EntityVillager['Villager'/34, l='MpServer', x=633.54, y=65.00, z=-136.66], EntityVillager['Villager'/35, l='MpServer', x=630.92, y=65.00, z=-139.30], EntityVillager['Villager'/36, l='MpServer', x=633.46, y=65.00, z=-128.84], EntityVillager['Villager'/37, l='MpServer', x=633.69, y=65.00, z=-127.88], EntityVillager['Villager'/38, l='MpServer', x=643.30, y=65.00, z=-158.30], EntityVillager['Villager'/39, l='MpServer', x=645.29, y=65.00, z=-158.45], EntityVillager['Villager'/40, l='MpServer', x=644.53, y=65.00, z=-136.20], EntityVillager['Villager'/41, l='MpServer', x=643.52, y=65.00, z=-136.70], EntityVillager['Villager'/42, l='MpServer', x=653.47, y=65.00, z=-117.30]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:451)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2779)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:427)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_112, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 496670896 bytes (473 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2209 10 mods loaded, 10 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.10.2-12.18.3.2209.jar) 
+	UCHIJAAAA	Forge{12.18.3.2209} [Minecraft Forge] (forgeSrc-1.10.2-12.18.3.2209.jar) 
+	UCHIJAAAA	deadlyworld{1.0} [Deadly World] (bin) 
+	UCHIJAAAA	JEI{3.13.6.389} [Just Enough Items] (jei_1.10.2-3.13.6.389.jar) 
+	UCHIJAAAA	mantle{1.10.2-1.1.4.203} [Mantle] (Mantle-1.10.2-1.1.4.jar) 
+	UCHIJAAAA	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	UCHIJAAAA	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCHIJAAAA	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCHIJAAAA	wawla{2.3.1.213} [What Are We Looking At] (Wawla-1.10.2-2.3.1.213.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 376.33' Renderer: 'GeForce GTX 750 Ti/PCIe/SSE2'
+	Launched Version: 1.10.2
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 750 Ti/PCIe/SSE2 GL version 4.5.0 NVIDIA 376.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz

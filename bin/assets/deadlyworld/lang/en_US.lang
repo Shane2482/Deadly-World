@@ -1,0 +1,42 @@
+//Tools
+item.basalt_pickaxe.name=Basalt Pickaxe
+item.basalt_axe.name=Basalt Axe
+item.basalt_hoe.name=Basalt Hoe
+item.basalt_shovel.name=Basalt Shovel
+item.basalt_sword.name=Basalt Sword
+
+//Armor
+item.basalt_helmet.name=Basalt Helmet
+item.basalt_chestplate.name=Basalt Chestplate
+item.basalt_leggings.name=Basalt Leggings
+item.basalt_boots.name=Basalt Boots
+
+//Items
+item.wood_dust.name=Wood Dust
+item.coal_chip.name=Coal Chip
+item.dirt_clump.name=Dirt Clump
+item.circuit_iron.name=Circuit Board Iron
+//item.circuit_gold.name=Circuit Board Gold
+item.circuit_diamond.name=Circuit Board Diamond
+
+//Blocks
+tile.basalt_rough.name=Basalt
+tile.basalt_smooth.name=Basalt Smooth
+tile.basalt_brick.name=Basalt Brick
+tile.basalt_carved.name=Basalt Carved
+tile.cracked_dirt.name=Cracked Dirt
+tile.plywood.name=Plywood
+
+//Inventories
+tile.plywood_chest.name=Plywood Chest
+container.plywood_chest=Plywood Chest
+tile.basalt_chest.name=Basalt Chest
+container.basalt_chest=Basalt Chest
+
+//Miss
+itemGroup.dpitems=Dead Planet Items
+itemGroup.dpblocks=Dead Planet Blocks
+
+container.basaltfurnace=Basalt Furnace
+
+

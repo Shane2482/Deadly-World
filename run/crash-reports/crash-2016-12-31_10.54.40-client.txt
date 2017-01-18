@@ -1,0 +1,88 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 12/31/16 10:54 AM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Dead Planet (deadplanet)
+Caused by: java.lang.IllegalArgumentException: The name deadplanet:null has been registered twice, for Block{deadplanet:null} and Block{null}.
+	at net.minecraftforge.fml.common.registry.FMLControlledNamespacedRegistry.add(FMLControlledNamespacedRegistry.java:475)
+	at net.minecraftforge.fml.common.registry.FMLControlledNamespacedRegistry.register(FMLControlledNamespacedRegistry.java:852)
+	at net.minecraftforge.fml.common.registry.GameData.register_impl(GameData.java:254)
+	at net.minecraftforge.fml.common.registry.GameRegistry.register(GameRegistry.java:153)
+	at Shane2482.DeadPlanet.init.ModBlocks.registerBlock(ModBlocks.java:34)
+	at Shane2482.DeadPlanet.blocks.BlockBase.register(BlockBase.java:28)
+	at Shane2482.DeadPlanet.blocks.BlockBase.<init>(BlockBase.java:19)
+	at Shane2482.DeadPlanet.blocks.block_cracked_dirt.<init>(block_cracked_dirt.java:11)
+	at Shane2482.DeadPlanet.init.ModBlocks.init(ModBlocks.java:25)
+	at Shane2482.DeadPlanet.DeadPlanet.preInit(DeadPlanet.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:602)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:243)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:221)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:145)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:614)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:257)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:477)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:386)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_112, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 845155472 bytes (806 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2185 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCH	Forge{12.18.3.2185} [Minecraft Forge] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCE	deadplanet{1.0} [Dead Planet] (bin) 
+	UCH	JEI{3.13.6.389} [Just Enough Items] (jei_1.10.2-3.13.6.389.jar) 
+	UCH	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	UCH	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCH	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCH	wawla{2.3.1.213} [What Are We Looking At] (Wawla-1.10.2-2.3.1.213.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 376.33' Renderer: 'GeForce GTX 750 Ti/PCIe/SSE2'

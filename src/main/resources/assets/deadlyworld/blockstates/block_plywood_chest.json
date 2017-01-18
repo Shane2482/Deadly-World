@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "deadlyworld:dummy" },
+        "facing=south": { "model": "deadlyworld:dummy"},
+        "facing=west":  { "model": "deadlyworld:dummy"},
+        "facing=east":  { "model": "deadlyworld:dummy"}
+    }
+}

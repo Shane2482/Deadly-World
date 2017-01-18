@@ -1,0 +1,116 @@
+package shane2482.deadlyworld.container;
+
+import javax.annotation.Nullable;
+
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import shane2482.deadlyworld.tiles.tileentity_plywood_deep_crate;
+
+public class container_Plywood_Deep_Crate extends Container {
+
+	private tileentity_plywood_deep_crate Te;
+
+	// Player Inventory
+	private final int hotbar = 9;
+	private final int playerInvRow = 3;
+	private final int playerInvColumn = 9;
+	private final int playerInv = playerInvRow + playerInvColumn;
+	private final int playerSlots = hotbar + playerInv;
+
+	// Slot Index
+	private final int playerFirstSlotIndex = 0;
+	private final int containerFirstSlotIndex = playerFirstSlotIndex + playerSlots;
+
+	// Container Slot Count
+	public final int containerSlots = 72;
+
+	public container_Plywood_Deep_Crate(InventoryPlayer playerInv, tileentity_plywood_deep_crate Te) {
+		this.Te = Te;
+
+		final int slotXSpacing = 18;
+		final int slotYSpacing = 18;
+
+		// Hotbar
+		final int hotbar_Xpos = 35;
+		final int hotbar_Ypos = 198;
+
+		for (int x = 0; x < hotbar; ++x) {
+			int slotNumber = x;
+			addSlotToContainer(new Slot(playerInv, slotNumber, hotbar_Xpos + slotXSpacing * x, hotbar_Ypos));
+		}
+		
+		//Player Inventory
+		final int playerInv_Xpos = 35;
+		final int playerInv_Ypos = 140;
+		
+		for(int y = 0;  y < playerInvRow; ++y){
+			for(int x = 0; x < playerInvColumn; ++x){
+				int slotNumber = hotbar + y * playerInvColumn + x;
+				int Xpos = playerInv_Xpos + x * slotXSpacing;
+				int ypos = playerInv_Ypos + y * slotYSpacing;
+				addSlotToContainer(new Slot(playerInv, slotNumber, Xpos, ypos));
+				
+			}
+		}
+		
+		if (containerSlots != Te.getSizeInventory()) {
+			System.err.println("Mismatched slot count in ContainerBasic(" + containerSlots + ") and TileInventory (" + Te.getSizeInventory()+")");
+		}
+		
+		//Container Inventory
+		final int containerXpos = 8;
+		final int containerYpos = 18;
+
+		for (int slotNumber = 0; slotNumber < containerSlots; slotNumber++) {
+		    addSlotToContainer(new Slot(Te, slotNumber, containerXpos + slotXSpacing * 12, containerXpos + slotYSpacing * (slotNumber / 6)));
+		}
+
+	}
+
+	@Nullable
+	@Override
+	public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
+		ItemStack itemstack = null;
+		Slot slot = (Slot) this.inventorySlots.get(index);
+
+		if (slot != null && slot.getHasStack()) {
+			ItemStack itemstack1 = slot.getStack();
+			itemstack = itemstack1.copy();
+
+			if (index < 6 * 12) {
+				if (!this.mergeItemStack(itemstack1, 6 * 12, this.inventorySlots.size(), true)) {
+					return null;
+				}
+			} else if (!this.mergeItemStack(itemstack1, 0, 6 * 12, false)) {
+				return null;
+			}
+
+			if (itemstack1.stackSize == 0) {
+				slot.putStack((ItemStack) null);
+			} else {
+				slot.onSlotChanged();
+			}
+		}
+
+		return itemstack;
+	}
+
+	@Override
+	public void onContainerClosed(EntityPlayer playerIn) {
+		super.onContainerClosed(playerIn);
+		this.Te.closeInventory(playerIn);
+	}
+
+	@Override
+	public boolean canInteractWith(EntityPlayer player) {
+		return this.Te.isUseableByPlayer(player);
+	}
+
+}

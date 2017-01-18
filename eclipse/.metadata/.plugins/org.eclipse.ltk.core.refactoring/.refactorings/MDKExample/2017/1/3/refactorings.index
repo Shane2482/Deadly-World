@@ -1,0 +1,43 @@
+1484515093403	Move compilation units
+1484515102634	Move compilation units
+1484515106997	Move compilation unit
+1484524065086	Rename local variable 'i'
+1484567405793	Rename local variable 'playerInv'
+1484571857421	Rename local variable 'compound'
+1484571876474	Rename local variable 'compound'
+1484572371847	Rename type 'block_plywood_deep_chest'
+1484572397176	Rename type 'tileentity_plywood_deep_chest'
+1484607372243	Rename field 'lowerChestInventory'
+1484607394132	Rename field 'upperChestInventory'
+1484607416091	Rename local variable 'lowerInv'
+1484643241214	Delete elements
+1484643246630	Delete element
+1484643256565	Delete element
+1484643404096	Rename local variable 'dispenserInventoryIn'
+1484643424436	Rename field 'dispenserInventory'
+1484703885617	Rename local variable 'XslotSpacing'
+1484703902168	Rename local variable 'YslotSpacing'
+1484705683614	Rename local variable 'slotXSpacing'
+1484705697645	Rename local variable 'slotYSpacing'
+1484710447634	Rename type 'gui_Plywood_Deep_Crate'
+1484710462145	Rename type 'block_plywood_deep_crate'
+1484710721725	Rename type 'tileentity_plywood_deep_crate'
+1484710748200	Delete element
+1484710766740	Move compilation unit
+1484710800892	Rename package 'shane2482.deadlyworld.handlers'
+1484710820769	Rename type 'gui_Plywood_Crate'
+1484710844562	Rename type 'container_Plywood_Deep_Crate'
+1484710885364	Delete element
+1484711452918	Rename local variable 'compound'
+1484711468459	Rename local variable 'nbttaglist'
+1484711542611	Rename local variable 'compound'
+1484711579687	Rename local variable 'nbttaglist'
+1484711592739	Rename local variable 'nbttagcompound'
+1484713608826	Rename type 'ContainerPlywoodDeepCrate'
+1484721610044	Rename local variable 'p_94530_1_'
+1484721630088	Rename local variable 'p_94530_2_'
+1484722309402	Move compilation units
+1484722313752	Delete element
+1484722449308	Delete element
+1484722455402	Delete element
+1484722512799	Rename type 'ItemBase'

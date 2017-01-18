@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "deadlyworld:block_workstation" }
+    }
+}

@@ -1,0 +1,19 @@
+package shane2482.deadlyworld.utils;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class renderutils {
+	 public static boolean isValid(ItemStack stack){
+	        return stack != null && !ItemStack.areItemStacksEqual(stack, getNull()) && stack.stackSize > 0 && stack.getItem() != null;
+	    }
+
+	    public static ItemStack getNull(){
+	        return null;
+	    }
+}

@@ -1,0 +1,7 @@
+package shane2482.deadlyworld.tiles;
+
+import net.minecraft.tileentity.TileEntity;
+
+public class tileentity_plywood_deep_chest extends TileEntity {
+
+}

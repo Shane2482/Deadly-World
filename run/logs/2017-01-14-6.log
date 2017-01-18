@@ -1,0 +1,109 @@
+[18:44:54] [Client thread/INFO]: Setting user: Player926
+[18:44:58] [Client thread/WARN]: Skipping bad option: lastServer:
+[18:44:58] [Client thread/INFO]: LWJGL Version: 2.9.4
+[18:45:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Deadly World, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Waila, FMLFileResourcePack:Waila Harvestability, FMLFileResourcePack:I Can See Everything, FMLFileResourcePack:What Are We Looking At
+[18:45:05] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:45:05] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[18:45:05] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:45:05] [Thread-8/INFO]: OpenAL initialized.
+[18:45:06] [Sound Library Loader/INFO]: Sound engine started
+[18:45:09] [Client thread/INFO]: Created: 16x16 textures-atlas
+[18:45:14] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Deadly World, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Waila, FMLFileResourcePack:Waila Harvestability, FMLFileResourcePack:I Can See Everything, FMLFileResourcePack:What Are We Looking At
+[18:45:16] [Client thread/INFO]: SoundSystem shutting down...
+[18:45:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:45:16] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:45:17] [Thread-12/INFO]: Initializing LWJGL OpenAL
+[18:45:17] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:45:17] [Thread-12/INFO]: OpenAL initialized.
+[18:45:17] [Sound Library Loader/INFO]: Sound engine started
+[18:45:19] [Client thread/INFO]: Created: 512x512 textures-atlas
+[18:45:20] [Client thread/WARN]: Skipping bad option: lastServer:
+[18:45:21] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[18:45:26] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[18:45:26] [Server thread/INFO]: Generating keypair
+[18:45:27] [Server thread/INFO]: Preparing start region for level 0
+[18:45:27] [Server thread/INFO]: Changing view distance to 13, from 10
+[18:45:28] [Server thread/INFO]: Player926[local:E:4899c4f6] logged in with entity id 54 at (552.8768642900437, 4.0, -900.1078741036806)
+[18:45:28] [Server thread/INFO]: Player926 joined the game
+[18:45:29] [Server thread/INFO]: Saving and pausing game...
+[18:45:29] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:45:29] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:45:29] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:45:29] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@5798e238[id=08b67744-0be2-3e10-bbbd-71a464b4b0c1,name=Player926,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:59) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:56) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827) [guava-17.0.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:165) [YggdrasilMinecraftSessionService.class:?]
+	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:3060) [Minecraft.class:?]
+	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:131) [SkinManager$3.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_112]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+[18:45:32] [Server thread/INFO]: Player926 has just earned the achievement [Taking Inventory]
+[18:45:32] [Client thread/INFO]: [CHAT] Player926 has just earned the achievement [Taking Inventory]
+[18:45:43] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ArrayIndexOutOfBoundsException: 27
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 27
+	at shane2482.deadlyworld.tiles.TileEntityPlywoodChest.getStackInSlot(TileEntityPlywoodChest.java:50) ~[TileEntityPlywoodChest.class:?]
+	at net.minecraft.inventory.Slot.getStack(Slot.java:83) ~[Slot.class:?]
+	at net.minecraft.inventory.Container.getInventory(Container.java:63) ~[Container.class:?]
+	at net.minecraft.inventory.Container.addListener(Container.java:52) ~[Container.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:100) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_plywood_chest.onBlockActivated(block_plywood_chest.java:274) ~[block_plywood_chest.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[18:45:43] [Server thread/ERROR]: Encountered an unexpected exception
+net.minecraft.util.ReportedException: Ticking player
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:789) ~[MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 27
+	at shane2482.deadlyworld.tiles.TileEntityPlywoodChest.getStackInSlot(TileEntityPlywoodChest.java:50) ~[TileEntityPlywoodChest.class:?]
+	at net.minecraft.inventory.Slot.getStack(Slot.java:83) ~[Slot.class:?]
+	at net.minecraft.inventory.Container.detectAndSendChanges(Container.java:85) ~[Container.class:?]
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdate(EntityPlayerMP.java:292) ~[EntityPlayerMP.class:?]
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:2111) ~[World.class:?]
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:874) ~[WorldServer.class:?]
+	at net.minecraft.world.World.updateEntity(World.java:2078) ~[World.class:?]
+	at net.minecraft.world.WorldServer.tickPlayers(WorldServer.java:675) ~[WorldServer.class:?]
+	at net.minecraft.world.World.updateEntities(World.java:1867) ~[World.class:?]
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:646) ~[WorldServer.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:783) ~[MinecraftServer.class:?]
+	... 4 more
+[18:45:43] [Server thread/ERROR]: This crash report has been saved to: C:\Users\shane\Desktop\Modding\Deadly World\run\.\crash-reports\crash-2017-01-14_18.45.43-server.txt
+[18:45:43] [Server thread/INFO]: Stopping server
+[18:45:43] [Server thread/INFO]: Saving players
+[18:45:43] [Server thread/INFO]: Saving worlds
+[18:45:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:45:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:45:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End

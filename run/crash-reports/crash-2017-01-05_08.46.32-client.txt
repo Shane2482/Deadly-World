@@ -1,0 +1,136 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 1/5/17 8:46 AM
+Description: Rendering Block Entity
+
+java.lang.NullPointerException: Rendering Block Entity
+	at net.minecraft.client.renderer.entity.Render.bindTexture(Render.java:128)
+	at net.minecraft.client.renderer.entity.Render.bindEntityTexture(Render.java:121)
+	at net.minecraft.client.renderer.entity.RenderEntityItem.doRender(RenderEntityItem.java:106)
+	at Shane2482.DeadPlanet.render.ModChestRenderer.renderTileEntityAt(ModChestRenderer.java:45)
+	at Shane2482.DeadPlanet.render.ModChestRenderer.renderTileEntityAt(ModChestRenderer.java:1)
+	at net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.renderTileEntityAt(TileEntityRendererDispatcher.java:153)
+	at net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.renderTileEntity(TileEntityRendererDispatcher.java:128)
+	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:721)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1368)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1282)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1091)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1139)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:406)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.minecraft.client.renderer.entity.Render.bindTexture(Render.java:128)
+	at net.minecraft.client.renderer.entity.Render.bindEntityTexture(Render.java:121)
+	at net.minecraft.client.renderer.entity.RenderEntityItem.doRender(RenderEntityItem.java:106)
+	at Shane2482.DeadPlanet.render.ModChestRenderer.renderTileEntityAt(ModChestRenderer.java:45)
+	at Shane2482.DeadPlanet.render.ModChestRenderer.renderTileEntityAt(ModChestRenderer.java:1)
+
+-- Block Entity Details --
+Details:
+	Name: ID // Shane2482.DeadPlanet.tileentity.TileEntityModChest
+	Block type: ID #225 (tile.mod_chest // Shane2482.DeadPlanet.blocks.block_mod_chest)
+	Block data value: 4 / 0x4 / 0b0100
+	Block location: World: (-448,4,896), Chunk: (at 0,0,0 in -28,56; contains blocks -448,0,896 to -433,255,911), Region: (-1,1; contains chunks -32,32 to -1,63, blocks -512,0,512 to -1,255,1023)
+	Actual block type: ID #225 (tile.mod_chest // Shane2482.DeadPlanet.blocks.block_mod_chest)
+	Actual block data value: 4 / 0x4 / 0b0100
+Stacktrace:
+	at net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.renderTileEntityAt(TileEntityRendererDispatcher.java:153)
+	at net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher.renderTileEntity(TileEntityRendererDispatcher.java:128)
+	at net.minecraft.client.renderer.RenderGlobal.renderEntities(RenderGlobal.java:721)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorldPass(EntityRenderer.java:1368)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1282)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player678'/70, l='MpServer', x=-439.84, y=4.00, z=902.63]]
+	Chunk stats: MultiplayerChunkCache: 699, 699
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-452,4,898), Chunk: (at 12,0,2 in -29,56; contains blocks -464,0,896 to -449,255,911), Region: (-1,1; contains chunks -32,32 to -1,63, blocks -512,0,512 to -1,255,1023)
+	Level time: 53277 game time, 3658 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 26 total; [EntityPlayerSP['Player678'/70, l='MpServer', x=-439.84, y=4.00, z=902.63], EntityHorse['Horse'/22, l='MpServer', x=-513.75, y=4.00, z=923.45], EntityCow['Cow'/23, l='MpServer', x=-507.15, y=4.00, z=867.17], EntityHorse['Horse'/24, l='MpServer', x=-507.13, y=4.00, z=879.97], EntityHorse['Horse'/25, l='MpServer', x=-504.02, y=4.00, z=883.48], EntityHorse['Horse'/26, l='MpServer', x=-503.84, y=4.00, z=888.10], EntityChicken['Chicken'/27, l='MpServer', x=-500.96, y=4.00, z=940.49], EntityHorse['Horse'/28, l='MpServer', x=-504.81, y=4.00, z=951.03], EntitySheep['Sheep'/29, l='MpServer', x=-483.18, y=4.00, z=859.85], EntityItem['item.item.egg'/30, l='MpServer', x=-491.27, y=4.00, z=925.60], EntityChicken['Chicken'/31, l='MpServer', x=-435.83, y=4.00, z=931.58], EntityItem['item.item.egg'/32, l='MpServer', x=-433.80, y=4.00, z=940.79], EntityHorse['Horse'/33, l='MpServer', x=-423.27, y=4.00, z=847.98], EntityHorse['Horse'/34, l='MpServer', x=-421.91, y=4.00, z=839.11], EntityHorse['Horse'/35, l='MpServer', x=-418.83, y=4.00, z=862.93], EntityItem['item.item.egg'/36, l='MpServer', x=-423.95, y=4.00, z=923.89], EntityChicken['Chicken'/37, l='MpServer', x=-418.94, y=4.00, z=929.07], EntityCow['Cow'/38, l='MpServer', x=-402.36, y=4.00, z=856.62], EntityCow['Cow'/39, l='MpServer', x=-403.48, y=4.00, z=863.64], EntityCow['Cow'/40, l='MpServer', x=-410.20, y=4.00, z=961.44], EntityHorse['Horse'/42, l='MpServer', x=-394.95, y=4.00, z=879.10], EntityCow['Cow'/43, l='MpServer', x=-397.79, y=4.00, z=927.60], EntityCow['Cow'/46, l='MpServer', x=-374.82, y=4.00, z=839.82], EntityPig['Pig'/47, l='MpServer', x=-381.73, y=4.00, z=949.70], EntityChicken['Chicken'/53, l='MpServer', x=-367.97, y=4.00, z=873.65], EntityChicken['Chicken'/55, l='MpServer', x=-366.15, y=4.00, z=928.46]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:451)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2779)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:427)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_112, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 714840488 bytes (681 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2185 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCHIJAAAA	Forge{12.18.3.2185} [Minecraft Forge] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCHIJAAAA	deadplanet{1.0} [Dead Planet] (bin) 
+	UCHIJAAAA	JEI{3.13.6.389} [Just Enough Items] (jei_1.10.2-3.13.6.389.jar) 
+	UCHIJAAAA	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	UCHIJAAAA	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCHIJAAAA	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCHIJAAAA	wawla{2.3.1.213} [What Are We Looking At] (Wawla-1.10.2-2.3.1.213.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 376.33' Renderer: 'GeForce GTX 750 Ti/PCIe/SSE2'
+	Launched Version: 1.10.2
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 750 Ti/PCIe/SSE2 GL version 4.5.0 NVIDIA 376.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz

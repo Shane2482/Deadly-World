@@ -1,0 +1,57 @@
+package shane2482.deadlyworld.handlers;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.ContainerChest;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.IGuiHandler;
+import shane2482.deadlyworld.gui.GuiBasaltChest;
+import shane2482.deadlyworld.gui.GuiPlywoodChest;
+import shane2482.deadlyworld.wip.tile.TileEntityBasaltChest;
+import shane2482.deadlyworld.wip.tile.TileEntityPlywoodChest;
+
+public class GuiHandler implements IGuiHandler {
+
+	public static final int Plywood_Chest = 0;
+	public static final int Basalt_Chest = 1;
+	public static final int Basalt_Furnace = 2;
+
+	@Override
+	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+
+		/*if (ID == Basalt_Furnace) {
+			return new ContainerModFurnace(player.inventory,
+					(TileEntityModFurnace) world.getTileEntity(new BlockPos(x, y, z)));
+		}*/
+		if (ID == Plywood_Chest) {
+			return new ContainerChest(player.inventory,
+					(TileEntityPlywoodChest) world.getTileEntity(new BlockPos(x, y, z)), player);
+		}
+		if (ID == Basalt_Chest) {
+			return new ContainerChest(player.inventory,
+					(TileEntityBasaltChest) world.getTileEntity(new BlockPos(x, y, z)), player);
+		}
+		return null;
+
+	}
+
+	@Override
+	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+
+		/*if (ID == Basalt_Furnace) {
+			return new GuiModFurnace(player.inventory,
+					(TileEntityModFurnace) world.getTileEntity(new BlockPos(x, y, z)));
+		}*/
+		if (ID == Plywood_Chest) {
+			return new GuiPlywoodChest(player.inventory,
+					(TileEntityPlywoodChest) world.getTileEntity(new BlockPos(x, y, z)));
+		}
+		if (ID == Basalt_Chest) {
+			return new GuiBasaltChest(player.inventory,
+					(TileEntityBasaltChest) world.getTileEntity(new BlockPos(x, y, z)));
+		}
+		return null;
+
+	}
+
+}

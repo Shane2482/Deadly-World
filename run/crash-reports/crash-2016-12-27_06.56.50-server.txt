@@ -1,0 +1,89 @@
+---- Minecraft Crash Report ----
+// This is a token for 1 free hug. Redeem at your nearest Mojangsta: [~~HUG~~]
+
+Time: 12/27/16 6:56 AM
+Description: Ticking player
+
+java.lang.NullPointerException: Ticking player
+	at Shane2482.DeadPlanet.init.ModArmor.onArmorTick(ModArmor.java:37)
+	at net.minecraft.entity.player.InventoryPlayer.decrementAnimations(InventoryPlayer.java:398)
+	at net.minecraft.entity.player.EntityPlayer.onLivingUpdate(EntityPlayer.java:559)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:2225)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:259)
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:341)
+	at net.minecraft.network.NetHandlerPlayServer.update(NetHandlerPlayServer.java:174)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher$1.update(NetworkDispatcher.java:216)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:308)
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:195)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:806)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at Shane2482.DeadPlanet.init.ModArmor.onArmorTick(ModArmor.java:37)
+	at net.minecraft.entity.player.InventoryPlayer.decrementAnimations(InventoryPlayer.java:398)
+	at net.minecraft.entity.player.EntityPlayer.onLivingUpdate(EntityPlayer.java:559)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:2225)
+	at net.minecraft.entity.player.EntityPlayer.onUpdate(EntityPlayer.java:259)
+
+-- Player being ticked --
+Details:
+	Entity Type: null (net.minecraft.entity.player.EntityPlayerMP)
+	Entity ID: 105
+	Entity Name: Player951
+	Entity's Exact location: 503.50, 4.00, -116.34
+	Entity's Block location: World: (503,4,-117), Chunk: (at 7,0,11 in 31,-8; contains blocks 496,0,-128 to 511,255,-113), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.entity.player.EntityPlayerMP.onUpdateEntity(EntityPlayerMP.java:341)
+	at net.minecraft.network.NetHandlerPlayServer.update(NetHandlerPlayServer.java:174)
+	at net.minecraftforge.fml.common.network.handshake.NetworkDispatcher$1.update(NetworkDispatcher.java:216)
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:308)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.NetworkManager@1595330f
+Stacktrace:
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:195)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:806)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_112, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 757407856 bytes (722 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2185 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCHIJAAAA	Forge{12.18.3.2185} [Minecraft Forge] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCHIJAAAA	dp{1.0} [Dead Planet] (bin) 
+	UCHIJAAAA	JEI{3.13.6.389} [Just Enough Items] (jei_1.10.2-3.13.6.389.jar) 
+	UCHIJAAAA	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	UCHIJAAAA	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCHIJAAAA	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCHIJAAAA	wawla{2.3.1.213} [What Are We Looking At] (Wawla-1.10.2-2.3.1.213.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player951'/105, l='New World', x=503.50, y=4.00, z=-116.34]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

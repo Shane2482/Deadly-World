@@ -1,0 +1,118 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 1/6/17 3:16 PM
+Description: Unexpected error
+
+java.lang.Error: Unresolved compilation problem: 
+	Mod_Chest cannot be resolved or is not a field
+
+	at Shane2482.DeadPlanet.blocks.block_mod_chest.onBlockActivated(block_mod_chest.java:174)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.processRightClickBlock(PlayerControllerMP.java:442)
+	at net.minecraft.client.Minecraft.rightClickMouse(Minecraft.java:1603)
+	at net.minecraft.client.Minecraft.processKeyBinds(Minecraft.java:2281)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2058)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1846)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1118)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:406)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at Shane2482.DeadPlanet.blocks.block_mod_chest.onBlockActivated(block_mod_chest.java:174)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.processRightClickBlock(PlayerControllerMP.java:442)
+	at net.minecraft.client.Minecraft.rightClickMouse(Minecraft.java:1603)
+	at net.minecraft.client.Minecraft.processKeyBinds(Minecraft.java:2281)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2058)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player940'/66, l='MpServer', x=-1623.80, y=4.00, z=719.72]]
+	Chunk stats: MultiplayerChunkCache: 675, 675
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-1612,4,725), Chunk: (at 4,0,5 in -101,45; contains blocks -1616,0,720 to -1601,255,735), Region: (-4,1; contains chunks -128,32 to -97,63, blocks -2048,0,512 to -1537,255,1023)
+	Level time: 75087 game time, 8385 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 27 total; [EntitySheep['Sheep'/8, l='MpServer', x=-1701.45, y=4.00, z=669.26], EntitySheep['Sheep'/11, l='MpServer', x=-1694.19, y=4.00, z=785.06], EntitySheep['Sheep'/12, l='MpServer', x=-1674.67, y=4.00, z=671.48], EntityChicken['Chicken'/13, l='MpServer', x=-1667.28, y=4.00, z=663.43], EntityItem['item.item.egg'/17, l='MpServer', x=-1662.19, y=4.00, z=664.72], EntityHorse['Donkey'/18, l='MpServer', x=-1651.90, y=4.00, z=788.02], EntityItem['item.item.egg'/19, l='MpServer', x=-1641.95, y=4.00, z=668.09], EntityChicken['Chicken'/20, l='MpServer', x=-1637.17, y=4.00, z=667.35], EntitySheep['Sheep'/21, l='MpServer', x=-1642.69, y=4.00, z=664.76], EntityChicken['Chicken'/22, l='MpServer', x=-1644.83, y=4.00, z=679.27], EntityChicken['Chicken'/23, l='MpServer', x=-1647.86, y=4.00, z=673.88], EntityChicken['Chicken'/24, l='MpServer', x=-1633.67, y=4.00, z=779.17], EntityChicken['Chicken'/25, l='MpServer', x=-1641.20, y=4.00, z=783.54], EntityPig['Pig'/26, l='MpServer', x=-1641.26, y=4.00, z=779.79], EntityPig['Pig'/27, l='MpServer', x=-1641.67, y=4.00, z=782.12], EntityItem['item.item.egg'/28, l='MpServer', x=-1631.80, y=4.00, z=783.22], EntityChicken['Chicken'/30, l='MpServer', x=-1614.97, y=4.00, z=799.38], EntityPig['Pig'/37, l='MpServer', x=-1571.71, y=4.00, z=684.22], EntityPig['Pig'/38, l='MpServer', x=-1573.38, y=4.00, z=759.28], EntityPig['Pig'/42, l='MpServer', x=-1554.09, y=4.00, z=649.93], EntityPig['Pig'/43, l='MpServer', x=-1553.09, y=4.00, z=650.95], EntityCow['Cow'/44, l='MpServer', x=-1561.74, y=4.00, z=661.15], EntitySheep['Sheep'/45, l='MpServer', x=-1560.22, y=4.00, z=714.83], EntitySheep['Sheep'/46, l='MpServer', x=-1552.73, y=4.00, z=711.15], EntityCow['Cow'/47, l='MpServer', x=-1545.71, y=4.00, z=639.85], EntityPlayerSP['Player940'/66, l='MpServer', x=-1623.80, y=4.00, z=719.72], EntityPig['Pig'/56, l='MpServer', x=-1548.59, y=4.00, z=778.01]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:451)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2779)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:435)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_112, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 488670008 bytes (466 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2185 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCHIJAAAA	Forge{12.18.3.2185} [Minecraft Forge] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCHIJAAAA	deadplanet{1.0} [Dead Planet] (bin) 
+	UCHIJAAAA	JEI{3.13.6.389} [Just Enough Items] (jei_1.10.2-3.13.6.389.jar) 
+	UCHIJAAAA	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	UCHIJAAAA	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCHIJAAAA	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCHIJAAAA	wawla{2.3.1.213} [What Are We Looking At] (Wawla-1.10.2-2.3.1.213.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 376.33' Renderer: 'GeForce GTX 750 Ti/PCIe/SSE2'
+	Launched Version: 1.10.2
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 750 Ti/PCIe/SSE2 GL version 4.5.0 NVIDIA 376.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz

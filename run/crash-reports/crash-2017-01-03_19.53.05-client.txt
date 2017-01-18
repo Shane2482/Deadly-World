@@ -1,0 +1,134 @@
+---- Minecraft Crash Report ----
+// This is a token for 1 free hug. Redeem at your nearest Mojangsta: [~~HUG~~]
+
+Time: 1/3/17 7:53 PM
+Description: Unexpected error
+
+java.lang.IllegalArgumentException: Duplicate id: TileEntityModFurnace
+	at net.minecraft.tileentity.TileEntity.addMapping(TileEntity.java:44)
+	at net.minecraftforge.fml.common.registry.GameRegistry.registerTileEntity(GameRegistry.java:260)
+	at Shane2482.DeadPlanet.tileentity.TileEntityModFurnace.register(TileEntityModFurnace.java:52)
+	at Shane2482.DeadPlanet.tileentity.TileEntityModFurnace.<init>(TileEntityModFurnace.java:48)
+	at Shane2482.DeadPlanet.blocks.block_basalt_furnace.createTileEntity(block_basalt_furnace.java:197)
+	at net.minecraft.world.chunk.Chunk.setBlockState(Chunk.java:666)
+	at net.minecraft.world.World.setBlockState(World.java:384)
+	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:184)
+	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:60)
+	at net.minecraft.item.ItemStack.onItemUse(ItemStack.java:159)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.processRightClickBlock(PlayerControllerMP.java:495)
+	at net.minecraft.client.Minecraft.rightClickMouse(Minecraft.java:1603)
+	at net.minecraft.client.Minecraft.processKeyBinds(Minecraft.java:2281)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2058)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1846)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1118)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:406)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.minecraft.tileentity.TileEntity.addMapping(TileEntity.java:44)
+	at net.minecraftforge.fml.common.registry.GameRegistry.registerTileEntity(GameRegistry.java:260)
+	at Shane2482.DeadPlanet.tileentity.TileEntityModFurnace.register(TileEntityModFurnace.java:52)
+	at Shane2482.DeadPlanet.tileentity.TileEntityModFurnace.<init>(TileEntityModFurnace.java:48)
+	at Shane2482.DeadPlanet.blocks.block_basalt_furnace.createTileEntity(block_basalt_furnace.java:197)
+	at net.minecraft.world.chunk.Chunk.setBlockState(Chunk.java:666)
+	at net.minecraft.world.World.setBlockState(World.java:384)
+	at net.minecraft.item.ItemBlock.placeBlockAt(ItemBlock.java:184)
+	at net.minecraft.item.ItemBlock.onItemUse(ItemBlock.java:60)
+	at net.minecraft.item.ItemStack.onItemUse(ItemStack.java:159)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.processRightClickBlock(PlayerControllerMP.java:495)
+	at net.minecraft.client.Minecraft.rightClickMouse(Minecraft.java:1603)
+	at net.minecraft.client.Minecraft.processKeyBinds(Minecraft.java:2281)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2058)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player846'/71, l='MpServer', x=-462.55, y=4.00, z=898.66]]
+	Chunk stats: MultiplayerChunkCache: 698, 698
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-452,4,898), Chunk: (at 12,0,2 in -29,56; contains blocks -464,0,896 to -449,255,911), Region: (-1,1; contains chunks -32,32 to -1,63, blocks -512,0,512 to -1,255,1023)
+	Level time: 32451 game time, 7652 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 28 total; [EntityCow['Cow'/15, l='MpServer', x=-538.19, y=4.00, z=892.61], EntitySheep['Sheep'/16, l='MpServer', x=-541.38, y=4.00, z=897.48], EntityCow['Cow'/17, l='MpServer', x=-534.51, y=4.00, z=942.69], EntitySheep['Sheep'/20, l='MpServer', x=-521.77, y=4.00, z=859.79], EntityChicken['Chicken'/21, l='MpServer', x=-506.92, y=4.00, z=913.18], EntityItem['item.item.egg'/22, l='MpServer', x=-513.57, y=4.00, z=907.01], EntityHorse['Horse'/23, l='MpServer', x=-522.31, y=4.00, z=914.41], EntityHorse['Horse'/24, l='MpServer', x=-526.13, y=4.00, z=952.03], EntitySheep['Sheep'/25, l='MpServer', x=-502.71, y=4.00, z=848.53], EntityHorse['Horse'/26, l='MpServer', x=-515.91, y=4.00, z=883.70], EntityHorse['Horse'/27, l='MpServer', x=-505.72, y=4.00, z=883.83], EntityHorse['Horse'/28, l='MpServer', x=-507.43, y=4.00, z=884.08], EntityCow['Cow'/29, l='MpServer', x=-496.84, y=4.00, z=882.30], EntityHorse['Horse'/30, l='MpServer', x=-499.98, y=4.00, z=932.52], EntityChicken['Chicken'/31, l='MpServer', x=-435.44, y=4.00, z=929.11], EntityCow['Cow'/32, l='MpServer', x=-445.32, y=4.00, z=945.15], EntityCow['Cow'/33, l='MpServer', x=-416.85, y=4.00, z=860.15], EntityChicken['Chicken'/34, l='MpServer', x=-430.36, y=4.00, z=927.18], EntityItem['item.item.egg'/35, l='MpServer', x=-429.44, y=4.00, z=926.32], EntityCow['Cow'/36, l='MpServer', x=-431.85, y=4.00, z=936.21], EntityHorse['Horse'/37, l='MpServer', x=-412.97, y=4.00, z=849.12], EntityHorse['Horse'/38, l='MpServer', x=-404.94, y=4.00, z=862.12], EntityHorse['Horse'/39, l='MpServer', x=-412.83, y=4.00, z=866.53], EntityCow['Cow'/41, l='MpServer', x=-395.82, y=4.00, z=838.83], EntityCow['Cow'/42, l='MpServer', x=-392.16, y=4.00, z=894.21], EntityPig['Pig'/43, l='MpServer', x=-392.52, y=4.00, z=965.48], EntityPig['Pig'/44, l='MpServer', x=-384.34, y=4.00, z=976.51], EntityPlayerSP['Player846'/71, l='MpServer', x=-462.55, y=4.00, z=898.66]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:451)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2779)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:435)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:26)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_112, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 645398376 bytes (615 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2185 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAA	FML{8.0.99.99} [Forge Mod Loader] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCHIJAAAA	Forge{12.18.3.2185} [Minecraft Forge] (forgeSrc-1.10.2-12.18.3.2185.jar) 
+	UCHIJAAAA	deadplanet{1.0} [Dead Planet] (bin) 
+	UCHIJAAAA	JEI{3.13.6.389} [Just Enough Items] (jei_1.10.2-3.13.6.389.jar) 
+	UCHIJAAAA	Waila{1.7.0} [Waila] (Waila-1.7.0-B3_1.9.4.jar) 
+	UCHIJAAAA	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCHIJAAAA	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCHIJAAAA	wawla{2.3.1.213} [What Are We Looking At] (Wawla-1.10.2-2.3.1.213.jar) 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 376.33' Renderer: 'GeForce GTX 750 Ti/PCIe/SSE2'
+	Launched Version: 1.10.2
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 750 Ti/PCIe/SSE2 GL version 4.5.0 NVIDIA 376.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 4x Intel(R) Core(TM) i5-3570K CPU @ 3.40GHz

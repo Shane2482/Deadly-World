@@ -1,0 +1,10 @@
+ackage shane2482.deadlyworld.items;
+
+public class item_wood_dust extends ItemBase {
+
+	public item_wood_dust(String Name, String RegName) {
+		super(Name, RegName);
+
+	}
+
+}

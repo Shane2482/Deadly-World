@@ -1,0 +1,75 @@
+package shane2482.deadlyworld.blocks.storage;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import shane2482.deadlyworld.DeadlyWorld;
+import shane2482.deadlyworld.blocks.base.itemblocks;
+import shane2482.deadlyworld.tiles.tileentity_plywood_deep_crate;
+
+public class block_plywood_deep_crate extends Block{
+
+	public block_plywood_deep_crate(Material material, String name, String Regname, float hardness, float resistance, String tool, int level) {
+		super(material);
+		setUnlocalizedName(name);
+		setRegistryName(Regname);
+		setHarvestLevel(tool, level);
+		setHardness(hardness);
+		setResistance(resistance);
+		this.setCreativeTab(DeadlyWorld.block);
+		this.register();
+	}
+
+	
+	private void register() {
+		registerBlock(this, this.getItemBlocks());
+
+		this.registerRendering();
+	}
+
+	public static void registerBlock(Block block, itemblocks itemBlock) {
+
+		GameRegistry.register(block);
+		itemBlock.setRegistryName(block.getRegistryName());
+		GameRegistry.register(itemBlock);
+	}
+
+	
+
+	protected itemblocks getItemBlocks() {
+		return new itemblocks(this);
+	}
+
+	protected void registerRendering() {
+		DeadlyWorld.proxy.addRenderRegister(new ItemStack(this), this.getRegistryName(), "inventory");
+	}
+
+	/*@Override
+	public TileEntity createNewTileEntity(World worldIn, int meta) {
+		return new tileentity_plywood_deep_crate();
+	}*/
+	
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
+	}
+
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return true;
+	}
+
+
+	@Override
+	public BlockRenderLayer getBlockLayer() {
+		return BlockRenderLayer.CUTOUT_MIPPED;
+	}
+
+}

@@ -1,0 +1,386 @@
+[23:48:13] [Client thread/INFO]: Setting user: Player734
+[23:48:17] [Client thread/WARN]: Skipping bad option: lastServer:
+[23:48:17] [Client thread/INFO]: LWJGL Version: 2.9.4
+[23:48:21] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Deadly World, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Mantle, FMLFileResourcePack:Waila, FMLFileResourcePack:Waila Harvestability, FMLFileResourcePack:I Can See Everything, FMLFileResourcePack:What Are We Looking At
+[23:48:24] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[23:48:24] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[23:48:24] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:48:24] [Thread-8/INFO]: OpenAL initialized.
+[23:48:24] [Sound Library Loader/INFO]: Sound engine started
+[23:48:27] [Client thread/INFO]: Created: 16x16 textures-atlas
+[23:48:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Deadly World, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Mantle, FMLFileResourcePack:Waila, FMLFileResourcePack:Waila Harvestability, FMLFileResourcePack:I Can See Everything, FMLFileResourcePack:What Are We Looking At
+[23:48:34] [Client thread/INFO]: SoundSystem shutting down...
+[23:48:34] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[23:48:34] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[23:48:34] [Thread-12/INFO]: Initializing LWJGL OpenAL
+[23:48:34] [Thread-12/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:48:34] [Thread-12/INFO]: OpenAL initialized.
+[23:48:35] [Sound Library Loader/INFO]: Sound engine started
+[23:48:37] [Client thread/INFO]: Created: 512x512 textures-atlas
+[23:48:38] [Client thread/WARN]: Skipping bad option: lastServer:
+[23:48:38] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[23:48:43] [Server thread/INFO]: Starting integrated minecraft server version 1.10.2
+[23:48:43] [Server thread/INFO]: Generating keypair
+[23:48:44] [Server thread/INFO]: Preparing start region for level 0
+[23:48:45] [Server thread/INFO]: Changing view distance to 13, from 10
+[23:48:45] [Server thread/INFO]: Player734[local:E:289d7de9] logged in with entity id 57 at (636.7548247275879, 65.0, -190.47412702311536)
+[23:48:45] [Server thread/INFO]: Player734 joined the game
+[23:48:46] [Server thread/INFO]: Saving and pausing game...
+[23:48:46] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:48:46] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:48:46] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[23:48:47] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@26392284[id=3f66a67c-db6c-36b7-b762-d7a40c17883b,name=Player734,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:65) ~[YggdrasilAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) [YggdrasilMinecraftSessionService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:59) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:56) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821) [guava-17.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827) [guava-17.0.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:165) [YggdrasilMinecraftSessionService.class:?]
+	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:3060) [Minecraft.class:?]
+	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:131) [SkinManager$3.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_112]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+[23:48:50] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:52] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:52] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:52] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:53] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:54] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:54] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:54] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:55] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:55] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:56] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:56] [Server thread/INFO]: Saving and pausing game...
+[23:48:56] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:48:56] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:48:56] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[23:48:58] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:48:59] [Server thread/FATAL]: Error executing task
+java.util.concurrent.ExecutionException: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:26) [Util.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:742) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:687) [MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:156) [IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:536) [MinecraftServer.class:?]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_112]
+Caused by: java.lang.ClassCastException: shane2482.deadlyworld.tiles.TileEntityPlywoodCrate cannot be cast to shane2482.deadlyworld.tiles.TileEntityWorkstation
+	at shane2482.deadlyworld.library.GuiHandler.getServerGuiElement(GuiHandler.java:45) ~[GuiHandler.class:?]
+	at net.minecraftforge.fml.common.network.NetworkRegistry.getRemoteGuiContainer(NetworkRegistry.java:251) ~[NetworkRegistry.class:?]
+	at net.minecraftforge.fml.common.network.internal.FMLNetworkHandler.openGui(FMLNetworkHandler.java:87) ~[FMLNetworkHandler.class:?]
+	at net.minecraft.entity.player.EntityPlayer.openGui(EntityPlayer.java:2729) ~[EntityPlayer.class:?]
+	at shane2482.deadlyworld.blocks.block_workstation.onBlockActivated(block_workstation.java:117) ~[block_workstation.class:?]
+	at net.minecraft.server.management.PlayerInteractionManager.processRightClickBlock(PlayerInteractionManager.java:477) ~[PlayerInteractionManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processRightClickBlock(NetHandlerPlayServer.java:706) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:68) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock.processPacket(CPacketPlayerTryUseItemOnBlock.java:13) ~[CPacketPlayerTryUseItemOnBlock.class:?]
+	at net.minecraft.network.PacketThreadUtil$1.run(PacketThreadUtil.java:15) ~[PacketThreadUtil$1.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:1.8.0_112]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:1.8.0_112]
+	at net.minecraft.util.Util.runTask(Util.java:25) ~[Util.class:?]
+	... 5 more
+[23:49:00] [Server thread/INFO]: Saving and pausing game...
+[23:49:00] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[23:49:00] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[23:49:00] [Server thread/INFO]: Saving chunks for level 'New World'/The End

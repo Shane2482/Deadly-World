@@ -1,0 +1,51 @@
+package shane2482.deadlyworld.blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockBreakable;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import shane2482.deadlyworld.DeadlyWorld;
+
+public class modblockbreakable extends BlockBreakable{
+	
+	private final boolean ignoreSimilarity;
+
+	public modblockbreakable(Material material, String name, String Regname, float hardness, float resistance, String tool, int level, boolean ignoreSimilarity) {
+		super(material, ignoreSimilarity);
+		setUnlocalizedName(name);
+		setRegistryName(Regname);
+		setHarvestLevel(tool, level);
+		setHardness(hardness);
+		setResistance(resistance);
+		this.setCreativeTab(DeadlyWorld.block);
+		this.ignoreSimilarity = ignoreSimilarity;
+		this.register();
+	}
+
+	
+	private void register() {
+		registerBlock(this, this.getItemBlocks());
+
+		this.registerRendering();
+	}
+
+	public static void registerBlock(Block block, itemblocks itemBlock) {
+
+		GameRegistry.register(block);
+		itemBlock.setRegistryName(block.getRegistryName());
+		GameRegistry.register(itemBlock);
+	}
+
+	
+
+	protected itemblocks getItemBlocks() {
+		return new itemblocks(this);
+	}
+
+	protected void registerRendering() {
+		DeadlyWorld.proxy.addRenderRegister(new ItemStack(this), this.getRegistryName(), "inventory");
+	}
+
+}

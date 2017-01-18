@@ -1,0 +1,10 @@
+package shane2482.deadlyworld.items;
+
+public class item_dirt_clump extends ItemBase {
+
+	public item_dirt_clump(String Name, String RegName) {
+		super(Name, RegName);
+
+	}
+
+}
