@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.storage.block_basalt_chest"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.storage.block_plywood_deep_crate"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.tiles.tileentity_plywood_deep_crate"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.player.InventoryPlayer"/>
@@ -58,6 +57,7 @@
 <fullyQualifiedTypeName name="shane2482.deadlyworld.gui.GuiToolBuilder"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.library.Reference"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.machines.block_tool_builder"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.init.ModBlocks"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.machines.block_tool_builder"/>
+<fullyQualifiedTypeName name="net.minecraft.block.BlockContainer"/>
 </qualifiedTypeNameHistroy>

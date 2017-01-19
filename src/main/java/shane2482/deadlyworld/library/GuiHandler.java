@@ -49,7 +49,7 @@ public class GuiHandler implements IGuiHandler {
 		}
 		
 		if (ID == Tool_Builder) {
-			return new ContainerToolBuilder(player.inventory);
+			return new ContainerToolBuilder(player.inventory, world, (new BlockPos(x, y, z)));
 		}
 		return null;
 
@@ -76,7 +76,7 @@ public class GuiHandler implements IGuiHandler {
 		}
 		
 		if (ID == Workstation) {
-			return new GuiToolBuilder(player.inventory);
+			return new GuiToolBuilder(player.inventory, world);
 		}
 		
 		

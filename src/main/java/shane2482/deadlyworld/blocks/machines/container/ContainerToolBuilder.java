@@ -35,8 +35,9 @@ public class ContainerToolBuilder extends Container {
 	private World worldObj;
 	private BlockPos pos;
 
-	public ContainerToolBuilder(InventoryPlayer playerInv) {
-		
+	public ContainerToolBuilder(InventoryPlayer playerInv, World world, BlockPos posIn) {
+		this.worldObj = world;
+        this.pos = posIn;
 		final int slotXSpacing = 18;
 		final int slotYSpacing = 18;
 

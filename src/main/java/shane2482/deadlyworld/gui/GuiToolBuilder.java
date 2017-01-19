@@ -5,6 +5,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -21,12 +22,19 @@ public class GuiToolBuilder extends GuiContainer {
 	private static final ResourceLocation GUI = new ResourceLocation(
 			Reference.MOD_ID + ":" + "textures/gui/container/tool_builder.png");
 
-	public GuiToolBuilder(InventoryPlayer playerInv) {
-		super(new ContainerToolBuilder(playerInv));
+	
+	public GuiToolBuilder(InventoryPlayer playerInv, World worldIn)
+    {
+        this(playerInv, worldIn, BlockPos.ORIGIN);
+    }
 
-		xSize = 176;
+    public GuiToolBuilder(InventoryPlayer playerInv, World worldIn, BlockPos blockPosition)
+    {
+        super(new ContainerToolBuilder(playerInv, worldIn, blockPosition));
+        xSize = 176;
 		ySize = 166;
-	}
+    }
+	
 
 	@Override
 	public void onGuiClosed() {
