@@ -1,0 +1,47 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ],
+    "type": {
+      "tin": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/tin_block"
+        }
+      },
+      "copper": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/copper_block"
+        }
+      },
+      "aluminum": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/aluminum_block"
+        }
+      },
+      "nickel": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/nickel_block"
+        }
+      },
+      "tungsten": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/tungsten_block"
+        }
+      },
+      "titanium": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/titanium_block"
+        }
+      }
+    }
+  }
+}

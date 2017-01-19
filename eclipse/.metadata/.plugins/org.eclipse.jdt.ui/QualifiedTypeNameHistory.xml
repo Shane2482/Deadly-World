@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="net.minecraft.block.ITileEntityProvider"/>
-<fullyQualifiedTypeName name="shane2482.deadlyworld.Reference"/>
-<fullyQualifiedTypeName name="net.minecraft.inventory.IInventory"/>
-<fullyQualifiedTypeName name="net.minecraft.block.BlockContainer"/>
-<fullyQualifiedTypeName name="shane2482.deadlyworld.container.container_Plywood_Deep_Crate"/>
-<fullyQualifiedTypeName name="shane2482.deadlyworld.handlers.GuiHandler"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.storage.block_basalt_chest"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.storage.block_plywood_deep_crate"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.tiles.tileentity_plywood_deep_crate"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.player.InventoryPlayer"/>
 <fullyQualifiedTypeName name="net.minecraft.inventory.Slot"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.AttachCapabilitiesEvent.TileEntity"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.block_workstation"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.container.ContainerPlywoodDeepCrate"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.gui.GuiWorkstation"/>
@@ -55,9 +48,16 @@
 <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
 <fullyQualifiedTypeName name="java.util.logging.LogManager"/>
-<fullyQualifiedTypeName name="shane2482.deadlyworld.library.Reference"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="scala.reflect.internal.Trees.This"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.DeadlyWorld"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.block_ore.oreType"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.ores.block_metals.metalType"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.ores.block_metals"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.machines.container.ContainerToolBuilder"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.gui.GuiToolBuilder"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.library.Reference"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.machines.block_tool_builder"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.init.ModBlocks"/>
 </qualifiedTypeNameHistroy>

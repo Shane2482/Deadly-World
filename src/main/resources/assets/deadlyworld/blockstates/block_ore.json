@@ -11,14 +11,32 @@
     "inventory": [
       {}
     ],
-    "type": {"tin": {"textures": {"all": "deadplanet:blocks/basalt_rough"}
+    "type": {
+      "tin": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/tin_ore"
+        }
       },
-      "copper": {"textures": {"all": "deadplanet:blocks/copper_ore"}
+      "copper": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/copper_ore"
+        }
       },
-      "aluminum": {"textures": {"all": "deadplanet:blocks/aluminum_ore"}
+      "aluminum": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/aluminum_ore"
+        }
       },
-      "nickel": {"textures": {"all": "deadplanet:blocks/nickel_ore"}
+      "nickel": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/nickel_ore"
+        }
+      },
+      "tungsten": {
+        "textures": {
+          "all": "deadlyworld:blocks/metals/tungsten_ore"
+        }
       }
     }
   }
-}﻿
+}

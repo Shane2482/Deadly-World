@@ -17,8 +17,8 @@ import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.datafix.FixTypes;
 import net.minecraft.util.datafix.walkers.ItemStackDataLists;
 import net.minecraft.util.text.ITextComponent;
-import shane2482.deadlyworld.blocks.block_workstation;
-import shane2482.deadlyworld.blocks.storage.container.ContainerWorkstation;
+import shane2482.deadlyworld.blocks.machines.block_workstation;
+import shane2482.deadlyworld.blocks.machines.container.ContainerWorkstation;
 
 public class TileEntityWorkstation extends TileEntity implements IInventory
 {

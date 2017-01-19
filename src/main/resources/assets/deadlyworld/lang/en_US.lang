@@ -16,7 +16,7 @@ item.wood_dust.name=Wood Dust
 item.coal_chip.name=Coal Chip
 item.dirt_clump.name=Dirt Clump
 item.circuit_iron.name=Circuit Board Iron
-//item.circuit_gold.name=Circuit Board Gold
+item.circuit_gold.name=Circuit Board Gold
 item.circuit_diamond.name=Circuit Board Diamond
 
 //Blocks
@@ -27,11 +27,31 @@ tile.basalt_carved.name=Basalt Carved
 tile.cracked_dirt.name=Cracked Dirt
 tile.plywood.name=Plywood
 
+//Metal Blocks
+tile.metal.tin.name=Tin Block
+tile.metal.copper.name=Copper Block
+tile.metal.aluminum.name=Aluminum Block
+tile.metal.nickel.name=Nickel Block
+tile.metal.tungsten.name=Tungsten Block
+tile.metal.titanium.name=Titanium Block
+
+//Ores
+tile.ore.tin.name=Tin Ore
+tile.ore.copper.name=Copper Ore
+tile.ore.aluminum.name=Aluminum Ore
+tile.ore.nickel.name=Nickel Ore
+tile.ore.tungsten.name=Tungsten Ore
+
 //Inventories
 tile.plywood_chest.name=Plywood Chest
 container.plywood_chest=Plywood Chest
 tile.basalt_chest.name=Basalt Chest
 container.basalt_chest=Basalt Chest
+tile.plywood_crate.name=Plywood Crate
+
+
+tile.workstation.name=Workstation
+
 
 //Miss
 itemGroup.dpitems=Dead Planet Items
