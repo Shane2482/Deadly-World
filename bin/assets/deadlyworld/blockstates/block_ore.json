@@ -1,0 +1,24 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "transform": "forge:default-block"
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ],
+    "type": {"tin": {"textures": {"all": "deadplanet:blocks/basalt_rough"}
+      },
+      "copper": {"textures": {"all": "deadplanet:blocks/copper_ore"}
+      },
+      "aluminum": {"textures": {"all": "deadplanet:blocks/aluminum_ore"}
+      },
+      "nickel": {"textures": {"all": "deadplanet:blocks/nickel_ore"}
+      }
+    }
+  }
+}﻿

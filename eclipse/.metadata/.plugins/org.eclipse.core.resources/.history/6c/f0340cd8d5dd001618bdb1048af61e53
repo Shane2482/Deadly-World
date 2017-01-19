@@ -1,0 +1,19 @@
+package shane2482.deadlyworld.utils;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import shane2482.deadlyworld.library.Reference;
+
+public class Utils {
+	private static Logger logger;
+	
+	
+	public static Logger getLogger() {
+		if(logger == null) {
+			logger = LogManager.getFormatterLogger(Reference.MOD_ID);
+		}
+		return logger;
+	}
+
+}

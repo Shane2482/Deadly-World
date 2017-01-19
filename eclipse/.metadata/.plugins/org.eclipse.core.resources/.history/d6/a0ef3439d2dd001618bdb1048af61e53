@@ -1,0 +1,101 @@
+package shane2482.deadlyworld.blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.ResourceLocation;
+import shane2482.deadlyworld.blocks.block_lamp.LampType;
+import shane2482.deadlyworld.library.Reference;
+
+public class block_ore extends Block{
+	public static final PropertyEnum TYPE = PropertyEnum.create("type", oreType.class);
+
+	
+	
+	public block_ore(String name) {
+		super(Material.ROCK);
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MOD_ID, name));
+		setDefaultState(blockState.getBaseState().withProperty(TYPE, oreType.Tin));
+	}
+
+	@Override
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[]{TYPE});
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static enum oreType implements IStringSerializable{
+		Tin("tin", 0), 
+		Copper("copper", 1), 
+		Aluminum("aluminum", 2), 
+		Nickel("nickel", 3 );
+
+		private String name;
+		private int ID;
+		
+		private oreType(String name, int ID) {
+			this.name=name;
+			this.ID = ID;
+		}
+		
+		
+		@Override
+		public String getName() {
+			return name;
+		}
+		public int getID(){
+			return ID;
+		}
+		
+		@Override
+		public String toString() {
+			return getName();
+		}
+		
+		
+		
+	}
+
+}

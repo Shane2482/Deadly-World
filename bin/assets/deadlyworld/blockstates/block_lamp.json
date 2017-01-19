@@ -1,12 +1,16 @@
 {
-    "forge_marker": 1,
-    "defaults": {
-        "transform": "forge:default-block",
-        "model": "minecraft:cube_all",
-        "textures": {"all": "deadlyworld:blocks/block_lamp"}
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+           "colour=red,ison=true": { "model": "deadlyworld:lamp_on"},
+            "colour=red,ison=false": { "model": "deadlyworld:lamp_off"},
+           
+         "colour=green,ison=true": { "model": "deadlyworld:lamp_on"},
+          "colour=green,ison=false": { "model": "deadlyworld:lamp_off"},
+         
+        "colour=yellow,ison=true": { "model": "deadlyworld:lamp_on"},
+         "colour=yellow,ison=false": { "model": "deadlyworld:lamp_off"},
+        
+          "colour=blue,ison=true": { "model": "deadlyworld:lamp_on"},
+           "colour=blue,ison=false": { "model": "deadlyworld:lamp_off"}
+          
     }
 }

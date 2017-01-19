@@ -1,0 +1,129 @@
+package shane2482.deadlyworld.blocks;
+
+import java.util.List;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockStateContainer;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import shane2482.deadlyworld.DeadlyWorld;
+import shane2482.deadlyworld.library.Reference;
+
+public class block_ore extends Block implements i{
+	public static final PropertyEnum TYPE = PropertyEnum.create("type", oreType.class);
+
+	
+	
+	public block_ore(String name) {
+		super(Material.ROCK);
+		setUnlocalizedName(name);
+		setRegistryName(new ResourceLocation(Reference.MOD_ID, name));
+		setDefaultState(blockState.getBaseState().withProperty(TYPE, oreType.Tin));
+		this.setCreativeTab(DeadlyWorld.block);
+	}
+
+	@Override
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[]{TYPE});
+	}
+	
+	@Override
+	public int getMetaFromState(IBlockState state) {
+		oreType type = (oreType) state.getValue(TYPE);
+		return type.ID;
+	}
+	
+	@Override
+	public IBlockState getStateFromMeta(int meta) {
+		return getDefaultState().withProperty(TYPE, oreType.values()[meta]);
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(Item item, CreativeTabs tab, List list) {
+		for(int i = 0; i < oreType.values().length; ++i){
+			list.add(new ItemStack(item, 1, i));
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static enum oreType implements IStringSerializable{
+		Tin("tin", 0), 
+		Copper("copper", 1), 
+		Aluminum("aluminum", 2), 
+		Nickel("nickel", 3 );
+
+		private String name;
+		private int ID;
+		
+		private oreType(String name, int ID) {
+			this.name=name;
+			this.ID = ID;
+		}
+		
+		
+		@Override
+		public String getName() {
+			return name;
+		}
+		public int getID(){
+			return ID;
+		}
+		
+		@Override
+		public String toString() {
+			return getName();
+		}
+		
+		
+		
+	}
+
+}

@@ -49,6 +49,7 @@ public class ClientProxy implements iproxy {
 		
 		
 		
+		
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(DeadlyWorld.instance, new GuiHandler());
 		// Custom Resource Location

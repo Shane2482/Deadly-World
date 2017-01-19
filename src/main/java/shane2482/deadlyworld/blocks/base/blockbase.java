@@ -3,6 +3,7 @@ package shane2482.deadlyworld.blocks.base;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import shane2482.deadlyworld.DeadlyWorld;
 
@@ -41,6 +42,11 @@ public class blockbase extends Block {
 
 	protected void registerRendering() {
 		DeadlyWorld.proxy.addRenderRegister(new ItemStack(this), this.getRegistryName(), "inventory");
+	}
+	
+	@Override
+	public BlockRenderLayer getBlockLayer() {
+		return BlockRenderLayer.CUTOUT_MIPPED;
 	}
 
 }
