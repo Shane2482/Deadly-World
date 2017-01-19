@@ -53,11 +53,11 @@
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.block_ore.oreType"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.ores.block_metals.metalType"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.ores.block_metals"/>
-<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.machines.container.ContainerToolBuilder"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.gui.GuiToolBuilder"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.library.Reference"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="shane2482.deadlyworld.init.ModBlocks"/>
 <fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.machines.block_tool_builder"/>
 <fullyQualifiedTypeName name="net.minecraft.block.BlockContainer"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.init.ModBlocks"/>
+<fullyQualifiedTypeName name="shane2482.deadlyworld.blocks.machines.container.ContainerToolBuilder"/>
 </qualifiedTypeNameHistroy>

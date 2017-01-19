@@ -54,10 +54,22 @@
 		<item value="false" key="create_package_info_java"/>
 	</section>
 	<section name="JavaSearchPage">
-		<item value="3" key="HISTORY_SIZE"/>
+		<item value="6" key="HISTORY_SIZE"/>
 		<item value="false" key="CASE_SENSITIVE"/>
-		<item value="11" key="INCLUDE_MASK"/>
-		<section name="HISTORY2">
+		<item value="15" key="INCLUDE_MASK"/>
+		<section name="HISTORY4">
+			<item value="false" key="isCaseSensitive"/>
+			<item value="" key="javaElement"/>
+			<item value="0" key="scope"/>
+			<item value="11" key="includeMask"/>
+			<item value="RenderItems" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="1" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY5">
 			<item value="false" key="isCaseSensitive"/>
 			<item value="" key="javaElement"/>
 			<item value="0" key="scope"/>
@@ -69,7 +81,19 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY0">
+		<section name="HISTORY2">
+			<item value="false" key="isCaseSensitive"/>
+			<item value="" key="javaElement"/>
+			<item value="0" key="scope"/>
+			<item value="11" key="includeMask"/>
+			<item value="workbench" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="3" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY3">
 			<item value="false" key="isCaseSensitive"/>
 			<item value="" key="javaElement"/>
 			<item value="0" key="scope"/>
@@ -81,15 +105,27 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY1">
+		<section name="HISTORY0">
 			<item value="false" key="isCaseSensitive"/>
 			<item value="" key="javaElement"/>
 			<item value="0" key="scope"/>
-			<item value="11" key="includeMask"/>
-			<item value="RenderItems" key="pattern"/>
+			<item value="15" key="includeMask"/>
+			<item value="Workbench" key="pattern"/>
 			<item value="2" key="limitTo"/>
 			<item value="0" key="matchLocations"/>
-			<item value="1" key="searchFor"/>
+			<item value="0" key="searchFor"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY1">
+			<item value="true" key="isCaseSensitive"/>
+			<item value="=MDKExample/C:\/Users\/shane\/.gradle\/caches\/minecraft\/net\/minecraftforge\/forge\/1.10.2-12.18.3.2209\/snapshot\/20161111\/forgeSrc-1.10.2-12.18.3.2209.jar&lt;net.minecraft.block(BlockWorkbench.class[BlockWorkbench" key="javaElement"/>
+			<item value="0" key="scope"/>
+			<item value="15" key="includeMask"/>
+			<item value="net.minecraft.block.BlockWorkbench" key="pattern"/>
+			<item value="2" key="limitTo"/>
+			<item value="0" key="matchLocations"/>
+			<item value="0" key="searchFor"/>
 			<list key="workingSets">
 			</list>
 		</section>
