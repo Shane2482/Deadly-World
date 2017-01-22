@@ -19,35 +19,30 @@ import shane2482.deadlyworld.tiles.TileEntityWorkstation;
 public class GuiHandler implements IGuiHandler {
 
 	public static final int Plywood_Chest = 0;
-	public static final int Basalt_Chest = 1;	
+	public static final int Basalt_Chest = 1;
 	public static final int Basalt_Furnace = 2;
 	public static final int Workstation = 3;
 	public static final int Plywood_Crate = 4;
 	public static final int Tool_Builder = 5;
-	
-	
-	
 
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 
-		
 		if (ID == Plywood_Chest) {
 			return new ContainerChest(player.inventory,
 					(TileEntityPlywoodChest) world.getTileEntity(new BlockPos(x, y, z)), player);
 		}
-		
+
 		if (ID == Workstation) {
 			return new ContainerWorkstation(player.inventory,
 					(TileEntityWorkstation) world.getTileEntity(new BlockPos(x, y, z)));
 		}
-		
-		
+
 		if (ID == Plywood_Crate) {
 			return new ContainerPlywoodCrate(player.inventory,
 					(TileEntityPlywoodCrate) world.getTileEntity(new BlockPos(x, y, z)));
 		}
-		
+
 		if (ID == Tool_Builder) {
 			return new ContainerToolBuilder(player.inventory, world, (new BlockPos(x, y, z)));
 		}
@@ -55,31 +50,28 @@ public class GuiHandler implements IGuiHandler {
 
 	}
 
-	
+	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 
-		
 		if (ID == Plywood_Chest) {
 			return new GuiPlywoodChest(player.inventory,
 					(TileEntityPlywoodChest) world.getTileEntity(new BlockPos(x, y, z)));
 		}
-		
+
 		if (ID == Workstation) {
 			return new GuiWorkstation(player.inventory,
 					(TileEntityWorkstation) world.getTileEntity(new BlockPos(x, y, z)));
 		}
-		
-		
+
 		if (ID == Plywood_Crate) {
 			return new GuiPlywoodCrate(player.inventory,
 					(TileEntityPlywoodCrate) world.getTileEntity(new BlockPos(x, y, z)));
 		}
-		
-		if (ID == Workstation) {
+
+		if (ID == Tool_Builder) {
 			return new GuiToolBuilder(player.inventory, world);
 		}
-		
-		
+
 		return null;
 
 	}

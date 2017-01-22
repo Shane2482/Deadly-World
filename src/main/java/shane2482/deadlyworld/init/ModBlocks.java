@@ -53,7 +53,7 @@ public class ModBlocks {
 		Basalt_Smooth = new blockbase(Material.ROCK, "basalt_smooth", "block_basalt_smooth", 5.0f, 20.0f, "pickaxe", 1);
 		Basalt_Brick = new blockbase(Material.ROCK, "basalt_brick", "block_basalt_brick", 5.0f, 20.0f, "pickaxe", 1);
 		Basalt_Carved = new blockbase(Material.ROCK, "basalt_carved", "block_basalt_carved", 5.0f, 20.0f, "pickaxe", 1);
-		//Lamp = new block_lamp(Material.GLASS, "lamp", "block_lamp", 1.0f, 3.0f, "", 0);
+		Lamp = new block_lamp(Material.GLASS, "lamp", "block_lamp", 1.0f, 3.0f, "", 0);
 		
 		//Ores
 		Ores = new block_ore("ore", "block_ore");

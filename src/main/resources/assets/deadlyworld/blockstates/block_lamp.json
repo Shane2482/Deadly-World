@@ -1,16 +1,118 @@
 {
-    "variants": {
-           "colour=red,ison=true": { "model": "deadlyworld:lamp_on"},
-            "colour=red,ison=false": { "model": "deadlyworld:lamp_off"},
-           
-         "colour=green,ison=true": { "model": "deadlyworld:lamp_on"},
-          "colour=green,ison=false": { "model": "deadlyworld:lamp_off"},
-         
-        "colour=yellow,ison=true": { "model": "deadlyworld:lamp_on"},
-         "colour=yellow,ison=false": { "model": "deadlyworld:lamp_off"},
-        
-          "colour=blue,ison=true": { "model": "deadlyworld:lamp_on"},
-           "colour=blue,ison=false": { "model": "deadlyworld:lamp_off"}
-          
+  "forge_marker": 1,
+  "defaults": {
+    "transform": "forge:default-block",
+    "inventory": [
+      {
+        "model": "deadlyworld:lamp_on_red"
+      }
+    ]
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "ison=true,type=black": {
+      "model": "deadlyworld:lamp_on_black"
+    },
+    "ison=false,type=black": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=blue": {
+      "model": "deadlyworld:lamp_on_blue"
+    },
+    "ison=false,type=blue": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=brown": {
+      "model": "deadlyworld:lamp_on_brown"
+    },
+    "ison=false,type=brown": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=clear": {
+      "model": "deadlyworld:lamp_on_clear"
+    },
+    "ison=false,type=clear": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=cyan": {
+      "model": "deadlyworld:lamp_on_cyan"
+    },
+    "ison=false,type=cyan": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=gray": {
+      "model": "deadlyworld:lamp_on_gray"
+    },
+    "ison=false,type=gray": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=green": {
+      "model": "deadlyworld:lamp_on_green"
+    },
+    "ison=false,type=green": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=light_blue": {
+      "model": "deadlyworld:lamp_on_light_blue"
+    },
+    "ison=false,type=light_blue": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=lime": {
+      "model": "deadlyworld:lamp_on_lime"
+    },
+    "ison=false,type=lime": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=magenta": {
+      "model": "deadlyworld:lamp_on_magenta"
+    },
+    "ison=false,type=magenta": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=orange": {
+      "model": "deadlyworld:lamp_on_orange"
+    },
+    "ison=false,type=orange": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=pink": {
+      "model": "deadlyworld:lamp_on_pink"
+    },
+    "ison=false,type=pink": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=purple": {
+      "model": "deadlyworld:lamp_on_purple"
+    },
+    "ison=false,type=purple": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=red": {
+      "model": "deadlyworld:lamp_on_red"
+    },
+    "ison=false,type=red": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=silver": {
+      "model": "deadlyworld:lamp_on_silver"
+    },
+    "ison=false,type=silver": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=white": {
+      "model": "deadlyworld:lamp_on_white"
+    },
+    "ison=false,type=white": {
+      "model": "deadlyworld:lamp_off"
+    },
+    "ison=true,type=yellow": {
+      "model": "deadlyworld:lamp_on_yellow"
+    },
+    "ison=false,type=yellow": {
+      "model": "deadlyworld:lamp_off"
     }
+  }
 }

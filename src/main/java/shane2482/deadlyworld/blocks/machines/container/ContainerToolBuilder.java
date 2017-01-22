@@ -16,6 +16,7 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import shane2482.deadlyworld.init.ModBlocks;
+import shane2482.deadlyworld.library.ToolBuilderCraftingManager;
 import shane2482.deadlyworld.tiles.TileEntityWorkstation;
 
 public class ContainerToolBuilder extends Container {
@@ -29,7 +30,7 @@ public class ContainerToolBuilder extends Container {
 	// Slot Index
 	private final int playerFirstSlotIndex = 0;
 
-	public InventoryCrafting craftMatrix = new InventoryCrafting(this, 3, 3);
+	public InventoryCrafting craftMatrix = new InventoryCrafting(this, 3, 1);
 	public IInventory craftResult = new InventoryCraftResult();
 
 	private World worldObj;
@@ -65,24 +66,20 @@ public class ContainerToolBuilder extends Container {
 		}
 
 		// Output
-		this.addSlotToContainer(new SlotCrafting(playerInv.player, craftMatrix, craftResult, 0, 123, 34));
+		this.addSlotToContainer(new SlotCrafting(playerInv.player, craftMatrix, craftResult, 0, 124, 35));
 
 		// Crafting Grid
-		for (int i = 0; i < 3; ++i)
-        {
-            for (int j = 0; j < 3; ++j)
-            {
-                this.addSlotToContainer(new Slot(this.craftMatrix, j + i * 3, 30 + j * 18, 17 + i * 18));
-            }
-        }
+		this.addSlotToContainer(new Slot(this.craftMatrix, 0, 66, 17));
+		this.addSlotToContainer(new Slot(this.craftMatrix, 1, 48, 35));
+		this.addSlotToContainer(new Slot(this.craftMatrix, 2, 30, 53));
 
 		onCraftMatrixChanged(craftMatrix);
 	}
 	
 	@Override
-	public void onCraftMatrixChanged(IInventory inventoryIn)
+	public void onCraftMatrixChanged(IInventory inventory)
     {
-        this.craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
+        this.craftResult.setInventorySlotContents(0, ToolBuilderCraftingManager.getInstance().findMatchingRecipe(craftMatrix, worldObj));
     }
 
 	@Override
@@ -173,8 +170,8 @@ public class ContainerToolBuilder extends Container {
     }
 
     @Override
-    public boolean canMergeSlot(ItemStack stack, Slot slotIn)
+    public boolean canMergeSlot(ItemStack stack, Slot slot)
     {
-        return slotIn.inventory != this.craftResult && super.canMergeSlot(stack, slotIn);
+        return slot.inventory != this.craftResult && super.canMergeSlot(stack, slot);
     }
 }

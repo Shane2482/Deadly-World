@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="player" key="selection"/>
-		<item value="true" key="casesensitive"/>
+		<item value="Level" key="selection"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="level"/>
+			<item value="light"/>
+			<item value="oreType"/>
 			<item value="playerIn"/>
 			<item value="TileEntityWorkstation"/>
-			<item value="oreType"/>
 			<item value="workstation"/>
 			<item value="Plywood"/>
 			<item value="container"/>
-			<item value="TileEntityPlywoodCrate"/>
-			<item value="plywood"/>
 		</list>
 		<list key="replacehistory">
+			<item value="lampType"/>
 			<item value="player"/>
 			<item value="TileEntityToolBuilder"/>
 			<item value="metalType"/>
@@ -25,7 +26,6 @@
 			<item value="TileEntityWorkstation"/>
 			<item value="nbt"/>
 			<item value="x"/>
-			<item value="list"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

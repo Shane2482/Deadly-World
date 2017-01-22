@@ -1,8 +1,0 @@
-package shane2482.deadlyworld;
-
-public class Snippet {
-	public static void main(String[] args) {
-		TileEntityChest.class
-	}
-}
-

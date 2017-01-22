@@ -29,8 +29,7 @@ public class RecipeHandler {
 	//Tools&Armor
 
 	private static void registerTools(Item pickaxe, Item axe, Item hoe, Item shovel, Item sword, ItemStack item) {
-		GameRegistry.addRecipe(new ItemStack(pickaxe),
-				new Object[] { "III", " S ", " S ", 'I', item, 'S', Items.STICK });
+		GameRegistry.addRecipe(new ItemStack(pickaxe), new Object[] { "III", " S ", " S ", 'I', item, 'S', Items.STICK });
 		GameRegistry.addRecipe(new ItemStack(axe), new Object[] { " II", " SI", " S ", 'I', item, 'S', Items.STICK });
 		GameRegistry.addRecipe(new ItemStack(axe), new Object[] { "II ", "IS ", " S ", 'I', item, 'S', Items.STICK });
 		GameRegistry.addRecipe(new ItemStack(hoe), new Object[] { "II ", " S ", " S ", 'I', item, 'S', Items.STICK });

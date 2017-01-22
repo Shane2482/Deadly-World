@@ -15,6 +15,7 @@ import shane2482.deadlyworld.init.ModItems;
 import shane2482.deadlyworld.init.ModTools;
 import shane2482.deadlyworld.library.RecipeHandler;
 import shane2482.deadlyworld.library.Reference;
+import shane2482.deadlyworld.library.ToolBuilderCraftingManager;
 import shane2482.deadlyworld.proxy.iproxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSION)
@@ -43,6 +44,7 @@ public class DeadlyWorld {
 	public void Init(FMLInitializationEvent event) {
 		RecipeHandler.registerSmeltingRecipes();
 		RecipeHandler.registerCraftingRecipes();
+		ToolBuilderCraftingManager.getInstance();
 		proxy.Init(event);
 
 	}
