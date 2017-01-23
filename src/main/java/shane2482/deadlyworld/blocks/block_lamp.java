@@ -41,11 +41,10 @@ public class block_lamp extends Block implements IMetaBlockName {
 	private static final PropertyBool isOn = PropertyBool.create("ison");
 	public static final PropertyEnum TYPE = PropertyEnum.create("type", lampType.class);
 
-	public block_lamp(Material material, String name, String regName, float hardness, float resistance, String tool,
-			int level) {
+	public block_lamp(Material material, String name, String regName, float hardness, float resistance, String tool,int level) {
 		super(material);
 		setSoundType(SoundType.GLASS);
-		setDefaultState(blockState.getBaseState().withProperty(TYPE, lampType.Clear).withProperty(isOn, Boolean.valueOf(false)));
+		setDefaultState(blockState.getBaseState().withProperty(TYPE, lampType.Clear).withProperty(isOn,	Boolean.valueOf(false)));
 		setUnlocalizedName(name);
 		setRegistryName(regName);
 		setHarvestLevel(tool, level);
@@ -55,11 +54,8 @@ public class block_lamp extends Block implements IMetaBlockName {
 		register();
 
 	}
-	
-	
-	
 
-	
+	// Register
 	public void register() {
 		registerBlock(this, new itemblockenum(this));
 		for (int i = 0; i < lampType.values().length; ++i) {
@@ -69,8 +65,7 @@ public class block_lamp extends Block implements IMetaBlockName {
 
 	protected void registerRendering() {
 		for (int i = 0; i < lampType.values().length; i++) {
-			DeadlyWorld.proxy.addRenderRegister(new ItemStack(this, 1, i), this.getRegistryName(),
-					TYPE.getName() + "=" + lampType.values()[i].name);
+			DeadlyWorld.proxy.addRenderRegister(new ItemStack(this, 1, i), this.getRegistryName(), TYPE.getName() + "=" + lampType.values()[i].name);
 		}
 	}
 
@@ -80,6 +75,69 @@ public class block_lamp extends Block implements IMetaBlockName {
 
 	}
 
+	// Render
+	@Override
+	public BlockRenderLayer getBlockLayer() {
+		return BlockRenderLayer.TRANSLUCENT;
+	}
+
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
+	}
+
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+
+	// Function
+	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
+			@Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+		if (world.isRemote) {
+			return true;
+		} else {
+			state = state.cycleProperty(isOn);
+			world.setBlockState(pos, state, 3);
+			float f = ((Boolean) state.getValue(isOn)).booleanValue() ? 0.6F : 0.5F;
+			world.playSound((EntityPlayer) null, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 0.3F, f);
+			world.notifyNeighborsOfStateChange(pos, this);
+
+			return true;
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	public void randomDisplayTick(IBlockState state, World world, BlockPos pos, Random rand) {
+		double d0 = (double) pos.getX() + 0.5D;
+		double d1 = (double) pos.getY() + 0.65D;
+		double d2 = (double) pos.getZ() + 0.5D;
+		double d3 = 0.22D;
+		double d4 = 0.27D;
+		if (!state.getValue(isOn).FALSE) {
+			world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+			world.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
+		}
+
+	}
+
+	@Override
+	public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block) {
+		if (world.isBlockPowered(pos)) {
+			world.setBlockState(pos, state.withProperty(isOn, Boolean.valueOf(true)));
+
+		} else if (!world.isBlockPowered(pos)) {
+			world.setBlockState(pos, state.withProperty(isOn, Boolean.valueOf(false)));
+
+		}
+	}
+
+	@Override
+	public int getLightValue(IBlockState state) {
+		return state.getValue(isOn) ? 15 : 0;
+	}
+
+	// Enum Block
 	@Override
 	public int damageDropped(IBlockState state) {
 		return getMetaFromState(state);
@@ -114,93 +172,25 @@ public class block_lamp extends Block implements IMetaBlockName {
 		return lampType.values()[stack.getItemDamage()].getName();
 	}
 
-	@Override
-	public BlockRenderLayer getBlockLayer() {
-		return BlockRenderLayer.CUTOUT_MIPPED;
-	}
-
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-
-	@Override
-	public boolean isFullCube(IBlockState state) {
-		return false;
-	}
-	
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
-	{
-        if (worldIn.isRemote)
-        {
-            return true;
-        }
-        else
-        {
-            state = state.cycleProperty(isOn);
-            worldIn.setBlockState(pos, state, 3);
-            float f = ((Boolean)state.getValue(isOn)).booleanValue() ? 0.6F : 0.5F;
-            worldIn.playSound((EntityPlayer)null, pos, SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 0.3F, f);
-            worldIn.notifyNeighborsOfStateChange(pos, this);
-           
-            return true;
-        }
-    }
-	
-	 @SideOnly(Side.CLIENT)
-	    public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand)
-	    {	 
-		 double d0 = (double)pos.getX() + 0.5D;
-	        double d1 = (double)pos.getY() + 0.65D;
-	        double d2 = (double)pos.getZ() + 0.5D;
-	        double d3 = 0.22D;
-	        double d4 = 0.27D;
-	        if(!state.getValue(isOn).FALSE){
-	        	worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-	        	worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-	        }
-	       
-	    }
-	
-	@Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn)
-    {
-        if (worldIn.isBlockPowered(pos)){
-        	worldIn.setBlockState(pos, state.withProperty(isOn, Boolean.valueOf(true)));
-        	
-        }
-        else{
-        	worldIn.setBlockState(pos, state.withProperty(isOn, Boolean.valueOf(false)));
-        	
-        }
-    }
-	
-	@Override
-    public int getLightValue(IBlockState state) {
-        return state.getValue(isOn) ? 15 : 0;
-    }
-	
-
-
+	// Enum
 	public static enum lampType implements IStringSerializable {
 
-		Black(0, "black" ),
-		Blue(1, "blue" ),
-		Brown(2, "brown" ),
-		Clear(3, "clear" ),
-		Cyan(4, "cyan" ),
-		Gray(5, "gray" ),
-		Green(6, "green" ),
-		Light_Blue(7, "light_blue" ),
-		Lime(8, "lime" ),
-		Magenta(9, "magenta" ),
-		Orange(10, "orange" ),
-		Pink(11, "pink" ),
-		Purple(12, "purple" ),
-		Red(13, "red" ),
-		Silver(14, "silver" ),
-		White(15, "white" );
-		
+		Black(0, "black"),
+		Blue(1, "blue"),
+		Brown(2, "brown"),
+		Clear(3, "clear"),
+		Cyan(4, "cyan"),
+		Gray(5,	"gray"),
+		Green(6, "green"),
+		Light_Blue(7, "light_blue"),
+		Lime(8, "lime"),
+		Magenta(9, "magenta"),
+		Orange(10, "orange"),
+		Pink(11, "pink"), 
+		Purple(12, "purple"),
+		Red(13, "red"),
+		Silver(14, "silver"),
+		White(15, "white");
 
 		private String name;
 		private int ID;

@@ -16,7 +16,8 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import shane2482.deadlyworld.init.ModBlocks;
-import shane2482.deadlyworld.library.ToolBuilderCraftingManager;
+import shane2482.deadlyworld.library.crafting.ToolBuilderCraftingManager;
+import shane2482.deadlyworld.library.crafting.ToolBuilderSlotCrafting;
 import shane2482.deadlyworld.tiles.TileEntityWorkstation;
 
 public class ContainerToolBuilder extends Container {
@@ -30,8 +31,8 @@ public class ContainerToolBuilder extends Container {
 	// Slot Index
 	private final int playerFirstSlotIndex = 0;
 
-	public InventoryCrafting craftMatrix = new InventoryCrafting(this, 3, 1);
-	public IInventory craftResult = new InventoryCraftResult();
+	 public InventoryCrafting craftMatrix = new InventoryCrafting(this, 1, 3);
+	    public IInventory craftResult = new InventoryCraftResult();
 
 	private World worldObj;
 	private BlockPos pos;
@@ -66,12 +67,15 @@ public class ContainerToolBuilder extends Container {
 		}
 
 		// Output
-		this.addSlotToContainer(new SlotCrafting(playerInv.player, craftMatrix, craftResult, 0, 124, 35));
+		this.addSlotToContainer(new ToolBuilderSlotCrafting(playerInv.player, craftMatrix, craftResult, 0, 124, 35));
 
 		// Crafting Grid
-		this.addSlotToContainer(new Slot(this.craftMatrix, 0, 66, 17));
-		this.addSlotToContainer(new Slot(this.craftMatrix, 1, 48, 35));
-		this.addSlotToContainer(new Slot(this.craftMatrix, 2, 30, 53));
+		// Crafting Grid
+				for (int y = 0; y < 3; ++y) {
+					for (int x = 0; x < 1; ++x) {
+						this.addSlotToContainer(new Slot(craftMatrix, x + y * 3, 107 + x * 18, 18 + y * 18));
+					}
+				}
 
 		onCraftMatrixChanged(craftMatrix);
 	}
@@ -79,7 +83,7 @@ public class ContainerToolBuilder extends Container {
 	@Override
 	public void onCraftMatrixChanged(IInventory inventory)
     {
-        this.craftResult.setInventorySlotContents(0, ToolBuilderCraftingManager.getInstance().findMatchingRecipe(craftMatrix, worldObj));
+		 ItemStack stack = ToolBuilderCraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj);
     }
 
 	@Override

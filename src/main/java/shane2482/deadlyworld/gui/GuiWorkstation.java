@@ -6,6 +6,8 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import shane2482.deadlyworld.blocks.machines.container.ContainerWorkstation;
 import shane2482.deadlyworld.library.Reference;
 import shane2482.deadlyworld.tiles.TileEntityWorkstation;

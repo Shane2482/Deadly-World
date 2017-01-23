@@ -11,6 +11,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
@@ -67,6 +68,21 @@ public class block_tool_builder extends Block{
 		if(!world.isRemote && !player.isSneaking()){
 			player.openGui(DeadlyWorld.instance, GuiHandler.Tool_Builder, world, pos.getX(), pos.getY(), pos.getZ());		}
 		return true;
+	}
+	
+	@Override
+	public BlockRenderLayer getBlockLayer() {
+		return BlockRenderLayer.CUTOUT_MIPPED;
+	}
+	
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
+	}
+
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return false;
 	}
 	
 

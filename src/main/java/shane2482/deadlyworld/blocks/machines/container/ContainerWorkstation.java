@@ -1,7 +1,5 @@
 package shane2482.deadlyworld.blocks.machines.container;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -67,7 +65,7 @@ public class ContainerWorkstation extends Container {
 		}
 
 		if (containerSlots != Te.getSizeInventory()) {
-			System.err.println("Mismatched slot count in Workstatiom(" + containerSlots + ") and TileInventory ("
+			System.err.println("Mismatched slot count in Workstation(" + containerSlots + ") and TileInventory ("
 					+ Te.getSizeInventory() + ")");
 		}
 
@@ -98,10 +96,11 @@ public class ContainerWorkstation extends Container {
     	}
     	}
 
-    public void onCraftMatrixChanged(IInventory inventoryIn)
-    {
-    	Te.craftResult.setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
-    }
+	 @Override
+	  public void onCraftMatrixChanged(IInventory inventoryIn) {
+	    this.craftResult
+	        .setInventorySlotContents(0, CraftingManager.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
+	  }
     
     @Override
     public void onContainerClosed(EntityPlayer par1EntityPlayer)
