@@ -1,0 +1,101 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "deadlyworld:lamp",
+    "textures": {
+      "0": "deadlyworld:blocks/basalt_carved",
+      "1": "deadlyworld:blocks/lamp_base",
+      "3": "minecraft:blocks/torch_on"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ],
+    "type": {
+      "black": {
+        "textures": {
+          "2": "minecraft:blocks/glass_black"
+        }
+      },
+      "blue": {
+        "textures": {
+          "2": "minecraft:blocks/glass_blue"
+        }
+      },
+      "brown": {
+        "textures": {
+          "2": "minecraft:blocks/glass_brown"
+        }
+      },
+      "clear": {
+        "textures": {
+          "2": "minecraft:blocks/glass"
+        }
+      },
+      "cyan": {
+        "textures": {
+          "2": "minecraft:blocks/glass_cyan"
+        }
+      },
+      "gray": {
+        "textures": {
+          "2": "minecraft:blocks/glass_gray"
+        }
+      },
+      "green": {
+        "textures": {
+          "2": "minecraft:blocks/glass_green"
+        }
+      },
+      "light_blue": {
+        "textures": {
+          "2": "minecraft:blocks/glass_light_blue"
+        }
+      },
+      "lime": {
+        "textures": {
+          "2": "minecraft:blocks/glass_lime"
+        }
+      },
+      "magenta": {
+        "textures": {
+          "2": "minecraft:blocks/glass_magenta"
+        }
+      },
+      "orange": {
+        "textures": {
+          "2": "minecraft:blocks/glass_orange"
+        }
+      },
+      "pink": {
+        "textures": {
+          "2": "minecraft:blocks/glass_pink"
+        }
+      },
+      "purple": {
+        "textures": {
+          "2": "minecraft:blocks/glass_purple"
+        }
+      },
+      "red": {
+        "textures": {
+          "2": "minecraft:blocks/glass_red"
+        }
+      },
+      "silver": {
+        "textures": {
+          "2": "minecraft:blocks/glass_silver"
+        }
+      },
+      "white": {
+        "textures": {
+          "2": "minecraft:blocks/glass_white"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+    
+     "furnace_open": { "category": "block", "sounds":["deadlyworld:block/furnace_open"] },
+  "furnace_close": { "category": "block", "sounds":["deadlyworld:block/furnace_close"] }
+}

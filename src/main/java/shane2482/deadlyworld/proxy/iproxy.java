@@ -11,9 +11,9 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import shane2482.deadlyworld.DeadlyWorld;
 import shane2482.deadlyworld.blocks.storage.block_plywood_chest;
+import shane2482.deadlyworld.blocks.storage.tiles.TileEntityBasaltChest;
+import shane2482.deadlyworld.blocks.storage.tiles.TileEntityPlywoodChest;
 import shane2482.deadlyworld.library.GuiHandler;
-import shane2482.deadlyworld.tiles.TileEntityBasaltChest;
-import shane2482.deadlyworld.tiles.TileEntityPlywoodChest;
 
 public interface iproxy {
 

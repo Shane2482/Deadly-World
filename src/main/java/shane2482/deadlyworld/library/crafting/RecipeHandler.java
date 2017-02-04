@@ -13,7 +13,7 @@ public class RecipeHandler {
 	
 	//Crafting Table
 	public static void registerCraftingRecipes() {
-		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.Plywood), new ItemStack(ModItems.Wood_Dust), new ItemStack(ModItems.Wood_Dust), new ItemStack(ModItems.Wood_Dust), new ItemStack(ModItems.Wood_Dust));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.Plywood), new ItemStack(ModItems.Wood_Dust,1,1), new ItemStack(ModItems.Wood_Dust), new ItemStack(ModItems.Wood_Dust), new ItemStack(ModItems.Wood_Dust));
 		registerTools(ModTools.Basalt_Pickaxe, ModTools.Basalt_Axe, ModTools.Basalt_Hoe, ModTools.Basalt_Shovel, ModTools.Basalt_Sword, new ItemStack(ModBlocks.Basalt_Rough));
 		registerArmourRecipe(ModArmor.Basalt_Helmet, ModArmor.Basalt_Chestplate, ModArmor.Basalt_Leggins, ModArmor.Basalt_Boots, new ItemStack(ModBlocks.Basalt_Rough));
 		

@@ -2,16 +2,12 @@ package shane2482.deadlyworld.blocks.storage.container;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import shane2482.deadlyworld.tiles.TileEntityPlywoodCrate;
+import shane2482.deadlyworld.blocks.storage.tiles.TileEntityPlywoodCrate;
 
 public class ContainerPlywoodCrate extends Container {
 
@@ -76,20 +72,22 @@ public class ContainerPlywoodCrate extends Container {
 	}
 
 	@Nullable
-	
+
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer player, int sourceSlotIndex)
-	{
-		Slot sourceSlot = (Slot)inventorySlots.get(sourceSlotIndex);
-		if (sourceSlot == null || !sourceSlot.getHasStack()) return null;
+	public ItemStack transferStackInSlot(EntityPlayer player, int sourceSlotIndex) {
+		Slot sourceSlot = (Slot) inventorySlots.get(sourceSlotIndex);
+		if (sourceSlot == null || !sourceSlot.getHasStack())
+			return null;
 		ItemStack sourceStack = sourceSlot.getStack();
 		ItemStack copyOfSourceStack = sourceStack.copy();
 
 		if (sourceSlotIndex >= playerFirstSlotIndex && sourceSlotIndex < playerFirstSlotIndex + playerSlots) {
-			if (!mergeItemStack(sourceStack, containerFirstSlotIndex, containerFirstSlotIndex + containerSlots, false)){
+			if (!mergeItemStack(sourceStack, containerFirstSlotIndex, containerFirstSlotIndex + containerSlots,
+					false)) {
 				return null;
 			}
-		} else if (sourceSlotIndex >= containerFirstSlotIndex && sourceSlotIndex < containerFirstSlotIndex + containerSlots) {
+		} else if (sourceSlotIndex >= containerFirstSlotIndex
+				&& sourceSlotIndex < containerFirstSlotIndex + containerSlots) {
 			if (!mergeItemStack(sourceStack, playerFirstSlotIndex, playerFirstSlotIndex + playerSlots, false)) {
 				return null;
 			}

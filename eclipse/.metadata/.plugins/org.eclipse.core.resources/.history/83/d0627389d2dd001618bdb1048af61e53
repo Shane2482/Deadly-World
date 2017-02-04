@@ -1,8 +1,0 @@
-package shane2482.deadlyworld;
-
-import net.minecraft.item.ItemStack;
-
-public interface IMetaBlockName {
-
-	String getSpecialName(ItemStack stack);
-}

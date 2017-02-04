@@ -23,8 +23,7 @@ public class blockbase extends Block {
 	
 	private void register() {
 		registerBlock(this, this.getItemBlocks());
-
-		this.registerRendering();
+		registerRendering();
 	}
 
 	public static void registerBlock(Block block, itemblocks itemBlock) {

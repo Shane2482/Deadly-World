@@ -97,7 +97,7 @@ public class block_metals extends Block implements IMetaBlockName {
 		Tungsten("tungsten", 4),
 		
 		//Alloys
-		Titanium("titanium", 5);
+		Bronze("bronze", 5);
 
 		private String name;
 		private int ID;

@@ -37,9 +37,9 @@
           "all": "deadlyworld:blocks/metals/tungsten_block"
         }
       },
-      "titanium": {
+      "bronze": {
         "textures": {
-          "all": "deadlyworld:blocks/metals/titanium_block"
+          "all": "deadlyworld:blocks/metals/bronze_block"
         }
       }
     }

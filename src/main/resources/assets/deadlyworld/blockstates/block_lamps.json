@@ -1,0 +1,101 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "deadlyworld:lamp",
+    "textures": {
+      "0": "deadlyworld:blocks/basalt_carved",
+      "1": "deadlyworld:blocks/lamp_base",
+      "3": "minecraft:blocks/torch_on"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ],
+    "type": {
+      "black": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "blue": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "brown": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "clear": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "cyan": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "gray": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "green": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "light_blue": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "lime": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "magenta": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "orange": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "pink": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "purple": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "red": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "silver": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      },
+      "white": {
+        "textures": {
+          "2": "deadlyworld:blocks/basalt_carved"
+        }
+      }
+    }
+  }
+}

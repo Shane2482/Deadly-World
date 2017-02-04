@@ -1,0 +1,26 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "deadlyworld:lamp",
+    "textures": {
+      "0": "deadlyworld:blocks/basalt_carved",
+      "1": "deadlyworld:blocks/lamp_base",
+      "3": "minecraft:blocks/torch_on"
+    }
+  },
+  "variants": {
+    "normal": [
+      {}
+    ],
+    "inventory": [
+      {}
+    ],
+    "type": {
+      "yellow": {
+        "textures": {
+          "2": "minecraft:blocks/glass_yellow"
+        }
+      }
+    }
+  }
+}

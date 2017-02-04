@@ -17,8 +17,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import shane2482.deadlyworld.DeadlyWorld;
 import shane2482.deadlyworld.blocks.base.itemblocks;
+import shane2482.deadlyworld.blocks.machines.tile.TileEntityWorkstation;
 import shane2482.deadlyworld.library.GuiHandler;
-import shane2482.deadlyworld.tiles.TileEntityWorkstation;
 
 
 public class block_workstation extends Block implements ITileEntityProvider{

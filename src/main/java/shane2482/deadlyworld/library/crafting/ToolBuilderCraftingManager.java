@@ -19,6 +19,26 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.RecipeBookCloning;
+import net.minecraft.item.crafting.RecipeFireworks;
+import net.minecraft.item.crafting.RecipeRepairItem;
+import net.minecraft.item.crafting.RecipeTippedArrow;
+import net.minecraft.item.crafting.RecipesArmor;
+import net.minecraft.item.crafting.RecipesArmorDyes;
+import net.minecraft.item.crafting.RecipesBanners;
+import net.minecraft.item.crafting.RecipesCrafting;
+import net.minecraft.item.crafting.RecipesDyes;
+import net.minecraft.item.crafting.RecipesFood;
+import net.minecraft.item.crafting.RecipesIngots;
+import net.minecraft.item.crafting.RecipesMapCloning;
+import net.minecraft.item.crafting.RecipesMapExtending;
+import net.minecraft.item.crafting.RecipesTools;
+import net.minecraft.item.crafting.RecipesWeapons;
+import net.minecraft.item.crafting.ShapedRecipes;
+import net.minecraft.item.crafting.ShapelessRecipes;
+import net.minecraft.item.crafting.ShieldRecipes;
 import net.minecraft.world.World;
 import shane2482.deadlyworld.init.ModItems;
 import shane2482.deadlyworld.init.ModTools;
@@ -27,7 +47,7 @@ public class ToolBuilderCraftingManager
 {
     /** The static instance of this class */
     private static final ToolBuilderCraftingManager INSTANCE = new ToolBuilderCraftingManager();
-    private final List<ToolBuilderShapedRecipes> recipes = Lists.<ToolBuilderShapedRecipes>newArrayList();
+    private final List<IRecipe> recipes = Lists.<IRecipe>newArrayList();
 
     /**
      * Returns the static instance of this class
@@ -40,7 +60,11 @@ public class ToolBuilderCraftingManager
 
     private ToolBuilderCraftingManager()
     {
-    	 this.addRecipe(new ItemStack(ModTools.Basalt_Pickaxe), new Object[] {"#", "#", '#', ModItems.Dirt_Clump});
+        
+    	this.addRecipe(new ItemStack(ModTools.Basalt_Pickaxe), new Object[] {"s", "s", "s", 's', ModItems.Dirt_Clump});
+        
+        Collections.sort(this.recipes, new ToolBuilderRecipeSorter(this));
+        
     }
 
     /**
@@ -119,12 +143,41 @@ public class ToolBuilderCraftingManager
         return shapedrecipes;
     }
 
-    
+    /**
+     * Adds a shapeless crafting recipe to the the game.
+     */
+    public void addToolBuilderShapelessRecipes(ItemStack stack, Object... recipeComponents)
+    {
+        List<ItemStack> list = Lists.<ItemStack>newArrayList();
+
+        for (Object object : recipeComponents)
+        {
+            if (object instanceof ItemStack)
+            {
+                list.add(((ItemStack)object).copy());
+            }
+            else if (object instanceof Item)
+            {
+                list.add(new ItemStack((Item)object));
+            }
+            else
+            {
+                if (!(object instanceof Block))
+                {
+                    throw new IllegalArgumentException("Invalid shapeless recipe: unknown type " + object.getClass().getName() + "!");
+                }
+
+                list.add(new ItemStack((Block)object));
+            }
+        }
+
+        this.recipes.add(new ToolBuilderShapelessRecipes(stack, list));
+    }
 
     /**
      * Adds an IRecipe to the list of crafting recipes.
      */
-    public void addRecipe(ToolBuilderShapedRecipes recipe)
+    public void addRecipe(IRecipe recipe)
     {
         this.recipes.add(recipe);
     }
@@ -135,7 +188,7 @@ public class ToolBuilderCraftingManager
     @Nullable
     public ItemStack findMatchingRecipe(InventoryCrafting craftMatrix, World worldIn)
     {
-        for (ToolBuilderShapedRecipes irecipe : this.recipes)
+        for (IRecipe irecipe : this.recipes)
         {
             if (irecipe.matches(craftMatrix, worldIn))
             {
@@ -148,7 +201,7 @@ public class ToolBuilderCraftingManager
 
     public ItemStack[] getRemainingItems(InventoryCrafting craftMatrix, World worldIn)
     {
-        for (ToolBuilderShapedRecipes irecipe : this.recipes)
+        for (IRecipe irecipe : this.recipes)
         {
             if (irecipe.matches(craftMatrix, worldIn))
             {
@@ -166,7 +219,7 @@ public class ToolBuilderCraftingManager
         return aitemstack;
     }
 
-    public List<ToolBuilderShapedRecipes> getRecipeList()
+    public List<IRecipe> getRecipeList()
     {
         return this.recipes;
     }

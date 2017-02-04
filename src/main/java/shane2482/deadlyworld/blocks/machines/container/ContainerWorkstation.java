@@ -1,5 +1,7 @@
 package shane2482.deadlyworld.blocks.machines.container;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -11,7 +13,7 @@ import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.world.World;
-import shane2482.deadlyworld.tiles.TileEntityWorkstation;
+import shane2482.deadlyworld.blocks.machines.tile.TileEntityWorkstation;
 
 public class ContainerWorkstation extends Container {
 	private TileEntityWorkstation Te;
@@ -41,15 +43,16 @@ public class ContainerWorkstation extends Container {
 		final int slotXSpacing = 18;
 		final int slotYSpacing = 18;
 
-		// Hotbar
-		final int hotbar_Xpos = 85;
-		final int hotbar_Ypos = 135;
+		// Output
+				this.addSlotToContainer(new SlotCrafting(playerInv.player, craftMatrix, craftResult, 0, 201, 36));
 
-		for (int x = 0; x < hotbar; ++x) {
-			int slotNumber = x;
-			addSlotToContainer(new Slot(playerInv, slotNumber, hotbar_Xpos + slotXSpacing * x, hotbar_Ypos));
-		}
-
+				// Crafting Grid
+				for (int y = 0; y < 3; ++y) {
+					for (int x = 0; x < 3; ++x) {
+						this.addSlotToContainer(new Slot(craftMatrix, x + y * 3, 107 + x * 18, 18 + y * 18));
+					}
+				}
+				
 		// Player Inventory
 		final int playerInv_Xpos = 85;
 		final int playerInv_Ypos = 77;
@@ -64,29 +67,28 @@ public class ContainerWorkstation extends Container {
 			}
 		}
 
-		if (containerSlots != Te.getSizeInventory()) {
-			System.err.println("Mismatched slot count in Workstation(" + containerSlots + ") and TileInventory ("
-					+ Te.getSizeInventory() + ")");
-		}
+		// Hotbar
+				final int hotbar_Xpos = 85;
+				final int hotbar_Ypos = 135;
 
-		// Container Inventory
-		final int containerXpos = 8;
-		final int containerYpos = 27;
+				for (int x = 0; x < hotbar; ++x) {
+					int slotNumber = x;
+					addSlotToContainer(new Slot(playerInv, slotNumber, hotbar_Xpos + slotXSpacing * x, hotbar_Ypos));
+				}
+				
+				
+				// Container Inventory
+				final int containerXpos = 8;
+				final int containerYpos = 27;
 
-		for (int slotNumber = 0; slotNumber < containerSlots; slotNumber++) {
-			addSlotToContainer(new Slot(Te, slotNumber, containerXpos + slotXSpacing * (slotNumber % 4),
-					containerYpos + slotYSpacing * (slotNumber / 4)));
-		}
+				for (int slotNumber = 0; slotNumber < containerSlots; slotNumber++) {
+					addSlotToContainer(new Slot(Te, slotNumber, containerXpos + slotXSpacing * (slotNumber % 4),
+							containerYpos + slotYSpacing * (slotNumber / 4)));
+				}
+				
+		
 
-		// Output
-		this.addSlotToContainer(new SlotCrafting(playerInv.player, craftMatrix, craftResult, 0, 201, 36));
-
-		// Crafting Grid
-		for (int y = 0; y < 3; ++y) {
-			for (int x = 0; x < 3; ++x) {
-				this.addSlotToContainer(new Slot(craftMatrix, x + y * 3, 107 + x * 18, 18 + y * 18));
-			}
-		}
+		
 		onCraftMatrixChanged(craftMatrix);
 	}
 
@@ -121,6 +123,8 @@ public class ContainerWorkstation extends Container {
 		return Te.isUseableByPlayer(entityPlayer);
 	}
 
+	@Override
+	@Nullable
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
     {
         ItemStack itemstack = null;
@@ -154,6 +158,15 @@ public class ContainerWorkstation extends Container {
                     return null;
                 }
             }
+            
+           /* else if (index >= 47 && index < 61)
+            {
+                if (!this.mergeItemStack(itemstack1, 10, 47, false))
+                {
+                    return null;
+                }
+            }*/
+            
             else if (!this.mergeItemStack(itemstack1, 10, 46, false))
             {
                 return null;
@@ -178,6 +191,8 @@ public class ContainerWorkstation extends Container {
 
         return itemstack;
     }
+
+
 
     public boolean canMergeSlot(ItemStack stack, Slot slot)
     {

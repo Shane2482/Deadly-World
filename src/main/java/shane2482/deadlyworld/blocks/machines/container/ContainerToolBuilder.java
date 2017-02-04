@@ -4,7 +4,6 @@ import javax.annotation.Nullable;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCraftResult;
@@ -12,13 +11,10 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import shane2482.deadlyworld.init.ModBlocks;
 import shane2482.deadlyworld.library.crafting.ToolBuilderCraftingManager;
-import shane2482.deadlyworld.library.crafting.ToolBuilderSlotCrafting;
-import shane2482.deadlyworld.tiles.TileEntityWorkstation;
 
 public class ContainerToolBuilder extends Container {
 	// Player Inventory
@@ -31,7 +27,7 @@ public class ContainerToolBuilder extends Container {
 	// Slot Index
 	private final int playerFirstSlotIndex = 0;
 
-	 public InventoryCrafting craftMatrix = new InventoryCrafting(this, 1, 3);
+	 public InventoryCrafting craftMatrix = new InventoryCrafting(this, 3, 1);
 	    public IInventory craftResult = new InventoryCraftResult();
 
 	private World worldObj;
@@ -67,13 +63,13 @@ public class ContainerToolBuilder extends Container {
 		}
 
 		// Output
-		this.addSlotToContainer(new ToolBuilderSlotCrafting(playerInv.player, craftMatrix, craftResult, 0, 124, 35));
+		this.addSlotToContainer(new SlotCrafting(playerInv.player, craftMatrix, craftResult, 0, 124, 35));
 
 		// Crafting Grid
 		// Crafting Grid
 				for (int y = 0; y < 3; ++y) {
 					for (int x = 0; x < 1; ++x) {
-						this.addSlotToContainer(new Slot(craftMatrix, x + y * 3, 107 + x * 18, 18 + y * 18));
+						this.addSlotToContainer(new Slot(craftMatrix, x + y * 3, 50 + x * 18, 18 + y * 18));
 					}
 				}
 
@@ -93,7 +89,7 @@ public class ContainerToolBuilder extends Container {
 
         if (!this.worldObj.isRemote)
         {
-            for (int i = 0; i < 9; ++i)
+            for (int i = 0; i < 3; ++i)
             {
                 ItemStack itemstack = this.craftMatrix.removeStackFromSlot(i);
 

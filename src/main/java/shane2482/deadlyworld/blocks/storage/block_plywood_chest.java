@@ -1,7 +1,5 @@
 package shane2482.deadlyworld.blocks.storage;
 
-import java.util.List;
-
 import javax.annotation.Nullable;
 
 import net.minecraft.block.Block;
@@ -12,7 +10,6 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityOcelot;
@@ -21,7 +18,6 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
@@ -37,40 +33,36 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import shane2482.deadlyworld.DeadlyWorld;
 import shane2482.deadlyworld.blocks.base.itemblocks;
+import shane2482.deadlyworld.blocks.storage.tiles.TileEntityPlywoodChest;
 import shane2482.deadlyworld.library.GuiHandler;
-import shane2482.deadlyworld.tiles.TileEntityPlywoodChest;
 
 public class block_plywood_chest extends BlockContainer {
+	
 	public static final PropertyDirection FACING = BlockHorizontal.FACING;
-	protected static final AxisAlignedBB NORTH_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0D, 0.9375D, 0.875D,
-			0.9375D);
-	protected static final AxisAlignedBB SOUTH_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 0.9375D, 0.875D,
-			1.0D);
-	protected static final AxisAlignedBB WEST_CHEST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0625D, 0.9375D, 0.875D,
-			0.9375D);
-	protected static final AxisAlignedBB EAST_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 1.0D, 0.875D,
-			0.9375D);
-	protected static final AxisAlignedBB NOT_CONNECTED_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 0.9375D, 0.875D,
-			0.9375D);
+	
+	protected static final AxisAlignedBB NORTH_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0D, 0.9375D, 0.875D,	0.9375D);
+	protected static final AxisAlignedBB SOUTH_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 0.9375D, 0.875D, 1.0D);
+	protected static final AxisAlignedBB WEST_CHEST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0625D, 0.9375D, 0.875D, 0.9375D);
+	protected static final AxisAlignedBB EAST_CHEST_AABB = new AxisAlignedBB(0.0625D, 0.0D, 0.0625D, 1.0D, 0.875D, 0.9375D);
+	
 
-	public block_plywood_chest(Material material, String name, String Regname, float hardness, float resistance,
-			String tool, int level) {
+	public block_plywood_chest(Material material, String name, String Regname, float hardness, float resistance, String tool, int level) {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(Regname);
 		setHarvestLevel(tool, level);
 		setHardness(hardness);
 		setResistance(resistance);
-		this.setCreativeTab(DeadlyWorld.block);
-		this.register();
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+		setCreativeTab(DeadlyWorld.block);
+		setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+		register();
 
 	}
 
+	// Register
 	private void register() {
-		registerBlock(this, this.getItemBlocks());
-
-		this.registerRendering();
+		registerBlock(this, getItemBlocks());
+		registerRendering();
 	}
 
 	public static void registerBlock(Block block, itemblocks itemBlock) {
@@ -85,9 +77,10 @@ public class block_plywood_chest extends BlockContainer {
 	}
 
 	protected void registerRendering() {
-		DeadlyWorld.proxy.addRenderRegister(new ItemStack(this), this.getRegistryName(), "inventory");
+		DeadlyWorld.proxy.addRenderRegister(new ItemStack(this), getRegistryName(), "inventory");
 	}
 
+	// Rendering
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
@@ -108,28 +101,28 @@ public class block_plywood_chest extends BlockContainer {
 		return source.getBlockState(pos.north()).getBlock() == this ? NORTH_CHEST_AABB
 				: (source.getBlockState(pos.south()).getBlock() == this ? SOUTH_CHEST_AABB
 						: (source.getBlockState(pos.west()).getBlock() == this ? WEST_CHEST_AABB
-								: (source.getBlockState(pos.east()).getBlock() == this ? EAST_CHEST_AABB
-										: NOT_CONNECTED_AABB)));
+								:EAST_CHEST_AABB));
 	}
 
+	// Facing
 	@Override
-	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+	public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
 
 		for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
 			BlockPos blockpos = pos.offset(enumfacing);
-			IBlockState iblockstate = worldIn.getBlockState(blockpos);
+			IBlockState iblockstate = world.getBlockState(blockpos);
 
 		}
 	}
 
 	@Override
-	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ,
+	public IBlockState onBlockPlaced(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ,
 			int meta, EntityLivingBase placer) {
-		return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing());
+		return getDefaultState().withProperty(FACING, placer.getHorizontalFacing());
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer,
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer,
 			ItemStack stack) {
 		EnumFacing enumfacing = EnumFacing
 				.getHorizontal(MathHelper.floor_double((double) (placer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3)
@@ -139,35 +132,35 @@ public class block_plywood_chest extends BlockContainer {
 		BlockPos blockpos1 = pos.south();
 		BlockPos blockpos2 = pos.west();
 		BlockPos blockpos3 = pos.east();
-		boolean flag = this == worldIn.getBlockState(blockpos).getBlock();
-		boolean flag1 = this == worldIn.getBlockState(blockpos1).getBlock();
-		boolean flag2 = this == worldIn.getBlockState(blockpos2).getBlock();
-		boolean flag3 = this == worldIn.getBlockState(blockpos3).getBlock();
+		boolean flag = this == world.getBlockState(blockpos).getBlock();
+		boolean flag1 = this == world.getBlockState(blockpos1).getBlock();
+		boolean flag2 = this == world.getBlockState(blockpos2).getBlock();
+		boolean flag3 = this == world.getBlockState(blockpos3).getBlock();
 
 		if (!flag && !flag1 && !flag2 && !flag3) {
-			worldIn.setBlockState(pos, state, 3);
+			world.setBlockState(pos, state, 3);
 		} else if (enumfacing.getAxis() != EnumFacing.Axis.X || !flag && !flag1) {
 			if (enumfacing.getAxis() == EnumFacing.Axis.Z && (flag2 || flag3)) {
 				if (flag2) {
-					worldIn.setBlockState(blockpos2, state, 3);
+					world.setBlockState(blockpos2, state, 3);
 				} else {
-					worldIn.setBlockState(blockpos3, state, 3);
+					world.setBlockState(blockpos3, state, 3);
 				}
 
-				worldIn.setBlockState(pos, state, 3);
+				world.setBlockState(pos, state, 3);
 			}
 		} else {
 			if (flag) {
-				worldIn.setBlockState(blockpos, state, 3);
+				world.setBlockState(blockpos, state, 3);
 			} else {
-				worldIn.setBlockState(blockpos1, state, 3);
+				world.setBlockState(blockpos1, state, 3);
 			}
 
-			worldIn.setBlockState(pos, state, 3);
+			world.setBlockState(pos, state, 3);
 		}
 
 		if (stack.hasDisplayName()) {
-			TileEntity tileentity = worldIn.getTileEntity(pos);
+			TileEntity tileentity = world.getTileEntity(pos);
 
 			if (tileentity instanceof TileEntityPlywoodChest) {
 				((TileEntityPlywoodChest) tileentity).setCustomName(stack.getDisplayName());
@@ -175,11 +168,11 @@ public class block_plywood_chest extends BlockContainer {
 		}
 	}
 
-	public IBlockState correctFacing(World worldIn, BlockPos pos, IBlockState state) {
+	public IBlockState correctFacing(World world, BlockPos pos, IBlockState state) {
 		EnumFacing enumfacing = null;
 
 		for (EnumFacing enumfacing1 : EnumFacing.Plane.HORIZONTAL) {
-			IBlockState iblockstate = worldIn.getBlockState(pos.offset(enumfacing1));
+			IBlockState iblockstate = world.getBlockState(pos.offset(enumfacing1));
 
 			if (iblockstate.getBlock() == this) {
 				return state;
@@ -200,15 +193,15 @@ public class block_plywood_chest extends BlockContainer {
 		} else {
 			EnumFacing enumfacing2 = (EnumFacing) state.getValue(FACING);
 
-			if (worldIn.getBlockState(pos.offset(enumfacing2)).isFullBlock()) {
+			if (world.getBlockState(pos.offset(enumfacing2)).isFullBlock()) {
 				enumfacing2 = enumfacing2.getOpposite();
 			}
 
-			if (worldIn.getBlockState(pos.offset(enumfacing2)).isFullBlock()) {
+			if (world.getBlockState(pos.offset(enumfacing2)).isFullBlock()) {
 				enumfacing2 = enumfacing2.rotateY();
 			}
 
-			if (worldIn.getBlockState(pos.offset(enumfacing2)).isFullBlock()) {
+			if (world.getBlockState(pos.offset(enumfacing2)).isFullBlock()) {
 				enumfacing2 = enumfacing2.getOpposite();
 			}
 
@@ -217,9 +210,46 @@ public class block_plywood_chest extends BlockContainer {
 	}
 
 	@Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
-		super.neighborChanged(state, worldIn, pos, blockIn);
-		TileEntity tileentity = worldIn.getTileEntity(pos);
+	public IBlockState getStateFromMeta(int meta) {
+		EnumFacing enumfacing = EnumFacing.getFront(meta);
+
+		if (enumfacing.getAxis() == EnumFacing.Axis.Y) {
+			enumfacing = EnumFacing.NORTH;
+		}
+
+		return getDefaultState().withProperty(FACING, enumfacing);
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state) {
+		return ((EnumFacing) state.getValue(FACING)).getIndex();
+	}
+
+	@Override
+	public IBlockState withRotation(IBlockState state, Rotation rot) {
+		return state.withProperty(FACING, rot.rotate((EnumFacing) state.getValue(FACING)));
+	}
+
+	@Override
+	public IBlockState withMirror(IBlockState state, Mirror mirror) {
+		return state.withRotation(mirror.toRotation((EnumFacing) state.getValue(FACING)));
+	}
+
+	@Override
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[] { FACING });
+	}
+
+	// Function
+	@Override
+	public TileEntity createNewTileEntity(World world, int meta) {
+		return new TileEntityPlywoodChest();
+	}
+
+	@Override
+	public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn) {
+		super.neighborChanged(state, world, pos, blockIn);
+		TileEntity tileentity = world.getTileEntity(pos);
 
 		if (tileentity instanceof TileEntityPlywoodChest) {
 			tileentity.updateContainingBlockInfo();
@@ -227,15 +257,15 @@ public class block_plywood_chest extends BlockContainer {
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		TileEntity tileentity = worldIn.getTileEntity(pos);
+	public void breakBlock(World world, BlockPos pos, IBlockState state) {
+		TileEntity tileentity = world.getTileEntity(pos);
 
 		if (tileentity instanceof IInventory) {
-			InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory) tileentity);
-			worldIn.updateComparatorOutputLevel(pos, this);
+			InventoryHelper.dropInventoryItems(world, pos, (IInventory) tileentity);
+			world.updateComparatorOutputLevel(pos, this);
 		}
 
-		super.breakBlock(worldIn, pos, state);
+		super.breakBlock(world, pos, state);
 	}
 
 	@Override
@@ -244,9 +274,9 @@ public class block_plywood_chest extends BlockContainer {
 		if (world.isRemote) {
 			return true;
 		} else {
-			ILockableContainer ilockablecontainer = this.getLockableContainer(world, pos);
+			ILockableContainer ilockablecontainer = getLockableContainer(world, pos);
 
-			if (ilockablecontainer != null) {
+			if (ilockablecontainer != null && !player.isSneaking()) {
 				player.openGui(DeadlyWorld.instance, GuiHandler.Plywood_Chest, world, pos.getX(), pos.getY(),
 						pos.getZ());
 
@@ -256,9 +286,10 @@ public class block_plywood_chest extends BlockContainer {
 		}
 	}
 
+	// Lockable Container
 	@Nullable
-	public ILockableContainer getLockableContainer(World worldIn, BlockPos pos) {
-		return this.getContainer(worldIn, pos, false);
+	public ILockableContainer getLockableContainer(World world, BlockPos pos) {
+		return getContainer(world, pos, false);
 	}
 
 	@Nullable
@@ -270,7 +301,7 @@ public class block_plywood_chest extends BlockContainer {
 		} else {
 			ILockableContainer ilockablecontainer = (TileEntityPlywoodChest) tileentity;
 
-			if (!bool && this.isBlocked(world, pos)) {
+			if (!bool && isBlocked(world, pos)) {
 				return null;
 			} else {
 				for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
@@ -278,7 +309,7 @@ public class block_plywood_chest extends BlockContainer {
 					Block block = world.getBlockState(blockpos).getBlock();
 
 					if (block == this) {
-						if (this.isBlocked(world, blockpos)) {
+						if (isBlocked(world, blockpos)) {
 							return null;
 						}
 
@@ -292,21 +323,17 @@ public class block_plywood_chest extends BlockContainer {
 		}
 	}
 
-	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new TileEntityPlywoodChest();
+	// Behaviour
+	private boolean isBlocked(World world, BlockPos pos) {
+		return isBelowSolidBlock(world, pos) || isOcelotSittingOnChest(world, pos);
 	}
 
-	private boolean isBlocked(World worldIn, BlockPos pos) {
-		return this.isBelowSolidBlock(worldIn, pos) || this.isOcelotSittingOnChest(worldIn, pos);
+	private boolean isBelowSolidBlock(World world, BlockPos pos) {
+		return world.getBlockState(pos.up()).isSideSolid(world, pos.up(), EnumFacing.DOWN);
 	}
 
-	private boolean isBelowSolidBlock(World worldIn, BlockPos pos) {
-		return worldIn.getBlockState(pos.up()).isSideSolid(worldIn, pos.up(), EnumFacing.DOWN);
-	}
-
-	private boolean isOcelotSittingOnChest(World worldIn, BlockPos pos) {
-		for (Entity entity : worldIn.getEntitiesWithinAABB(EntityOcelot.class,
+	private boolean isOcelotSittingOnChest(World world, BlockPos pos) {
+		for (Entity entity : world.getEntitiesWithinAABB(EntityOcelot.class,
 				new AxisAlignedBB((double) pos.getX(), (double) (pos.getY() + 1), (double) pos.getZ(),
 						(double) (pos.getX() + 1), (double) (pos.getY() + 2), (double) (pos.getZ() + 1)))) {
 			EntityOcelot entityocelot = (EntityOcelot) entity;
@@ -325,39 +352,8 @@ public class block_plywood_chest extends BlockContainer {
 	}
 
 	@Override
-	public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos) {
-		return Container.calcRedstoneFromInventory(this.getLockableContainer(worldIn, pos));
-	}
-
-	@Override
-	public IBlockState getStateFromMeta(int meta) {
-		EnumFacing enumfacing = EnumFacing.getFront(meta);
-
-		if (enumfacing.getAxis() == EnumFacing.Axis.Y) {
-			enumfacing = EnumFacing.NORTH;
-		}
-
-		return this.getDefaultState().withProperty(FACING, enumfacing);
-	}
-
-	@Override
-	public int getMetaFromState(IBlockState state) {
-		return ((EnumFacing) state.getValue(FACING)).getIndex();
-	}
-
-	@Override
-	public IBlockState withRotation(IBlockState state, Rotation rot) {
-		return state.withProperty(FACING, rot.rotate((EnumFacing) state.getValue(FACING)));
-	}
-
-	@Override
-	public IBlockState withMirror(IBlockState state, Mirror mirrorIn) {
-		return state.withRotation(mirrorIn.toRotation((EnumFacing) state.getValue(FACING)));
-	}
-
-	@Override
-	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] { FACING });
+	public int getComparatorInputOverride(IBlockState blockState, World world, BlockPos pos) {
+		return Container.calcRedstoneFromInventory(getLockableContainer(world, pos));
 	}
 
 }
