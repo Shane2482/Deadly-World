@@ -29,7 +29,9 @@ import shane2482.deadlyworld.render.BasaltChestRenderer;
 import shane2482.deadlyworld.render.PlywoodChestRenderer;
 
 public class ClientProxy implements iproxy {
-	```private static final Map<ItemStack, ModelResourceLocation> MODEL_LOCATIONS = new HashMap<ItemStack, ModelResourceLocation>();```
+	```
+		private static final Map<ItemStack, ModelResourceLocation> MODEL_LOCATIONS = new HashMap<ItemStack, ModelResourceLocation>();
+	```
 
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
