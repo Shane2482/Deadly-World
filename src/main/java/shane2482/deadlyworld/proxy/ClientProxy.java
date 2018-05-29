@@ -29,7 +29,7 @@ import shane2482.deadlyworld.render.BasaltChestRenderer;
 import shane2482.deadlyworld.render.PlywoodChestRenderer;
 
 public class ClientProxy implements iproxy {
-	private static final Map<ItemStack, ModelResourceLocation> MODEL_LOCATIONS = new HashMap<ItemStack, ModelResourceLocation>();
+	```private static final Map<ItemStack, ModelResourceLocation> MODEL_LOCATIONS = new HashMap<ItemStack, ModelResourceLocation>();```
 
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
@@ -57,11 +57,11 @@ public class ClientProxy implements iproxy {
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(DeadlyWorld.instance, new GuiHandler());
 
-		// Custom Resource Location
+		```// Custom Resource Location
 		for (Map.Entry<ItemStack, ModelResourceLocation> entry : MODEL_LOCATIONS.entrySet()) {
 			ModelLoader.setCustomModelResourceLocation(entry.getKey().getItem(), entry.getKey().getItemDamage(),
 					entry.getValue());
-		}
+		}```
 	}
 
 	@Override
@@ -74,10 +74,10 @@ public class ClientProxy implements iproxy {
 
 	}
 
-	@Override
+	```@Override
 	public void addRenderRegister(ItemStack stack, ResourceLocation location, String variant) {
 		MODEL_LOCATIONS.put(stack, new ModelResourceLocation(location, variant));
 
-	}
+	```
 
 }
