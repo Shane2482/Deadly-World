@@ -29,41 +29,17 @@ import shane2482.deadlyworld.render.BasaltChestRenderer;
 import shane2482.deadlyworld.render.PlywoodChestRenderer;
 
 public class ClientProxy implements iproxy {
-	```
-		private static final Map<ItemStack, ModelResourceLocation> MODEL_LOCATIONS = new HashMap<ItemStack, ModelResourceLocation>();
-	```
+	//Using a map for the resorce location
+	private static final Map<ItemStack, ModelResourceLocation> MODEL_LOCATIONS = new HashMap<ItemStack, ModelResourceLocation>();
+	
 
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
-
-		ModTools.registerRender();
-		ModArmor.registerRender();
-		ModSoundHandler.init();
-
-		// Storage
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBasaltChest.class, new BasaltChestRenderer());
-		GameRegistry.registerTileEntity(TileEntityBasaltChest.class, "BasaltChest");
-
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityPlywoodChest.class, new PlywoodChestRenderer());
-		GameRegistry.registerTileEntity(TileEntityPlywoodChest.class, "PlywoodChest");
-
-		GameRegistry.registerTileEntity(TileEntityPlywoodCrate.class, "PlywoodCrate");
-
-		// Machines
-		GameRegistry.registerTileEntity(TileEntityWorkstation.class, "Workstation");
-
-		GameRegistry.registerTileEntity(TileEntityFurnaceBasic.class, "BasaltFurnace");
-		
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAlloyFurnace.class, new AlloyFurnaceRenderer());
-		GameRegistry.registerTileEntity(TileEntityAlloyFurnace.class, "AlloyFurnace");
-
-		NetworkRegistry.INSTANCE.registerGuiHandler(DeadlyWorld.instance, new GuiHandler());
-
-		```// Custom Resource Location
+		// Custom Resource Location
 		for (Map.Entry<ItemStack, ModelResourceLocation> entry : MODEL_LOCATIONS.entrySet()) {
 			ModelLoader.setCustomModelResourceLocation(entry.getKey().getItem(), entry.getKey().getItemDamage(),
 					entry.getValue());
-		}```
+		}
 	}
 
 	@Override
@@ -76,10 +52,11 @@ public class ClientProxy implements iproxy {
 
 	}
 
-	```@Override
+	///Call register Render
+	@Override
 	public void addRenderRegister(ItemStack stack, ResourceLocation location, String variant) {
 		MODEL_LOCATIONS.put(stack, new ModelResourceLocation(location, variant));
 
-	```
+	
 
 }
